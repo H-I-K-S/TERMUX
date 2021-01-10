@@ -81,6 +81,7 @@ const help = (prefix, botname, oname) => {
   │
   ├─ ❏ ${prefix}neonime
   ├─ ❏ ${prefix}pokemon
+  ├─ ❏ ${prefix}loli
   └─ ❏ ${prefix}nekonime
 ◪ *FUN*
   │
