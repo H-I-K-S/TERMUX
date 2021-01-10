@@ -1068,6 +1068,27 @@ async function starts() {
                    hasil = ` *Tempat : ${anu.tempat}\nCuaca : ${anu.cuaca}\nAngin : ${anu.angin}\nSuhu : ${anu.suhu}\nKelembapan : ${anu.kelembapan}`
                    client.sendMessage(from, hasil, text, {quoted: mek})
                    break
+                        case 'game':
+				if (!isPublic) return reply(mess.only.public)
+if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+					anu = await fetchJson(`http://rt-files.000webhostapp.com/tts.php?apikey=rasitech`, {method: 'get'})
+					setTimeout( () => {
+					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.desk, text, {quoted: mek}) // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					client.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
+					}, 20000) // 1000 = 1s,
+					setTimeout( () => {
+					client.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+					client.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
+					}, 1000) // 1000 = 1s,
+					setTimeout( () => {
+					client.sendMessage(from, anu.result.soal, text, { quoted: mek }) // ur cods
+					}, 0) // 1000 = 1s,
+					break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						reply(mess.wait)
