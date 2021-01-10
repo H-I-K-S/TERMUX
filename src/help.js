@@ -10,7 +10,6 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}info
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
-  ├─ ❏ ${prefix}bocchigroup
   └─ ❏ ${prefix}bugreport
 ◪ *MAKER*
   │
@@ -19,6 +18,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}toimg
   ├─ ❏ ${prefix}tomp3
   ├─ ❏ ${prefix}bpink
+  ├─ ❏ ${prefix}marvellogo
+  ├─ ❏ ${prefix}snowwrite
   ├─ ❏ ${prefix}3dtext
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
@@ -72,6 +73,7 @@ const help = (prefix, botname, oname) => {
   └─ ❏ ${prefix}quran
 ◪ *STALK*
   │
+  ├─ ❏ ${prefix}tiktokstalk
   └─ ❏ ${prefix}igstalk
 ◪ *WIBU*
   │
