@@ -286,6 +286,11 @@ async function starts() {
                 hasil = data.result.fml
                 reply(hasil)
                 break
+              case 'owner':
+                case 'creator':
+                  client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
+               client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, { quoted: mek} )
+                break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroup) return reply(mess.only.group)
