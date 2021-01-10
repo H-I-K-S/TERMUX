@@ -72,7 +72,7 @@ Follow The Steps Below!
 
 | NEW USER | YES
 | :---------------------------------------------: | :-----------: |
-|  Register Username And Old|✅|
+|  Register Username And Old| Coming Soon|
 
 |  MAKER  |                                           YES |
 | :---------------------------------------------: | :-----------: |
