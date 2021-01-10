@@ -1169,22 +1169,22 @@ async function starts() {
 						fs.writeFileSync('./src/daftar.json', JSON.stringify(user))
 						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
 					break
-                                        case 'welcome':
-					if (!isGroup) return reply(group only)
+                                case 'welcome':
+					if (!isGroup) return reply(mess.only.group)
                                         if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(admij only)
-					if (args.length < 1) return reply('𝐤𝐞𝐭𝐢𝐤 enable 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐠𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧')
+					if (args.length < 1) return reply('ketik enable untuk mengaktifkan')
 					if (Number(args[0]) === enable) {
-						if (isWelkom) return reply('𝐟𝐢𝐭𝐮𝐫 𝐬𝐮𝐝𝐚𝐡 𝐚𝐤𝐭𝐢𝐯')
+						if (isWelkom) return reply('fitur sudah aktif')
 						welkom.push(from)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('❬ 𝐒𝐔𝐂𝐂𝐒𝐄𝐒𝐒 ❭ 𝐦𝐞𝐧𝐠𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧 𝐟𝐢𝐭𝐮𝐫 𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐩𝐚𝐝𝐚 𝐠𝐫𝐨𝐮𝐩 𝐢𝐧𝐢️')
+						reply('❬ SUCCSESS ❭ mengaktifkan fitur welcome di group ini')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, disable)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('❬ 𝐒𝐔𝐂𝐂𝐒𝐄𝐒𝐒 ❭ 𝐦𝐞𝐧𝐨𝐧𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧 𝐟𝐢𝐭𝐮𝐫 𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐩𝐚𝐝𝐚 𝐠𝐫𝐨𝐮𝐩 𝐢𝐧𝐢️')
+						reply('❬ SUCCSESS ❭ menonaktifkan fitur welcome di group ini')
 					} else {
-						reply('𝐤𝐞𝐭𝐢𝐤 enable 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐠𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧, disable 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐨𝐧𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧 𝐟𝐢𝐭𝐮𝐫')
+						reply('ketik enable untuk mengaktifkan, disable untuk menonaktifkan fitur')
 					}
                                         break
                                 case 'ytmp3':
