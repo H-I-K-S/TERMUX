@@ -28,6 +28,8 @@ const help = (prefix, botname, oname) => {
   └─ ❏ ${prefix}ytsearch
 ◪ *EDUCATION*
   │
+  ├─ ❏ ${prefix}wiki
+  ├─ ❏ ${prefix}wikien
   └─ ❏ ${prefix}artinama
 ◪ *TANYA*
   │
