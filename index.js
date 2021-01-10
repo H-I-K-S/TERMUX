@@ -383,7 +383,7 @@ async function starts() {
 					reply(mess.wait)
 					buffer = await getBuffer(anu.thumb)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ytv?url=${tels}`, {method: 'get'})
-					hasil = `Judul ➼* ${anu.title}\n*Filesize ➼* ${anu.filesize}\n*resolution ➼* ${anu.resolution}\n*Tipe ➼* ${anu.ext}\n*Link ➼* ${anu.result}`					
+					hasil = `*❏ Judul* : ${anu.title}\n*❏ Filesize* : ${anu.filesize}\n*❏ resolution* : ${anu.resolution}\n*❏ Tipe* : ${anu.ext}\n*❏ Link* : ${anu.result}`					
 					client.sendMessage(from, buffer, image,  {quoted: mek, caption: hasil})
 					break							
 				case 'trendtwit':
