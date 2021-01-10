@@ -285,6 +285,40 @@ async function starts() {
                 }
               await client.sendMessage(from, options, text)
                break
+                                case 'tiktokstalk':
+					try {
+						if (args.length < 1) return client.sendMessage(from, '𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 𝐧𝐲𝐚 𝐦𝐚𝐧𝐚 𝐤𝐚𝐤? ', text, {quoted: mek})
+						let { user, stats } = await tiktod.getUserProfileInfo(args[0])
+						reply(mess.wait)
+						teks = `*ID* : ${user.id}\n*Username* : ${user.uniqueId}\n*Nickname* : ${user.nickname}\n*Followers* : ${stats.followerCount}\n*Followings* : ${stats.followingCount}\n*Posts* : ${stats.videoCount}\n*Luv* : ${stats.heart}\n`
+						buffer = await getBuffer(user.avatarLarger)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('𝐮𝐬𝐞𝐫𝐧𝐚𝐦𝐞 𝐭𝐢𝐝𝐚𝐤 𝐯𝐚𝐥𝐢𝐝')
+					}
+					break
+				case 'snowwrite':
+					var gh = body.slice(11)
+					var gbl7 = gh.split("|")[0];
+					var gbl8 = gh.split("|")[1];
+					if (args.length < 1) return reply(`Kirim perintah ${prefix}snowwrite teks1|teks2, contoh ${prefix}snowwrite aqulzz|galuh`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/snowwrite?text1=${gbl7}&text2=${gbl8}&apikey=apivinz`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'marvellogo':
+					var gh = body.slice(12)
+					var gbl5 = gh.split("|")[0];
+					var gbl6 = gh.split("|")[1];
+					if (args.length < 1) return reply(`Kirim perintah ${prefix}marvellogo teks1|teks2, contoh ${prefix}marvellogo aqulzz|galuh`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/marvellogo?text1=${gbl5}&text2=${gbl6}&apikey=apivinz`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+
 				case 'artinama':
                   client.updatePresence(from, Presence.composing) 
                     data = await fetchJson(`https://arugaz.herokuapp.com/api/artinama?nama=${body.slice(10)}`)
