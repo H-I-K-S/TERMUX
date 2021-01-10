@@ -237,6 +237,7 @@ async function starts() {
                                         break
                                 case 'loli':
                                         gatauda = body.slice(6)
+                                        if (!isDaftar) return reply(mess.only.daftarB)
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomloli?apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
@@ -244,6 +245,7 @@ async function starts() {
                                         break
                   case 'promote':
 					client.updatePresence(from, Presence.composing) 
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -275,16 +277,19 @@ async function starts() {
 				break
 			case 'quotes':
 				client.updatePresence(from, Presence.composing) 
+                                if (!isDaftar) return reply(mess.only.daftarB)
 				data = await fetchJson(`http://mhankbarbars.herokuapp.com/api/randomquotes`)
 				ez = `*➸ Author :* ${data.author}\n*➸ Quotes :* ${data.quotes}`
 				reply(ez)
 				break
 				case '3dtext':
                 data = await await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${body.slice(8)}`)
+                if (!isDaftar) return reply(mess.only.daftarB)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
                 break
                 case 'fml':
                 data = await fetchJson(`https://docs-jojo.herokuapp.com/api/fml`)
+                if (!isDaftar) return reply(mess.only.daftarB)
                 hasil = data.result.fml
                 reply(hasil)
                 break
@@ -295,6 +300,7 @@ async function starts() {
                 break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
+                if (!isDaftar) return reply(mess.only.daftarB)
                 if (!isGroup) return reply(mess.only.group)
                 teks = body.slice(9)
                 group = await client.groupMetadata(from);
@@ -313,6 +319,7 @@ async function starts() {
                                 case 'tiktokstalk':
 					try {
 						if (args.length < 1) return client.sendMessage(from, '𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 𝐧𝐲𝐚 𝐦𝐚𝐧𝐚 𝐤𝐚𝐤? ', text, {quoted: mek})
+                                                if (!isDaftar) return reply(mess.only.daftarB)
 						let { user, stats } = await tiktod.getUserProfileInfo(args[0])
 						reply(mess.wait)
 						teks = `*ID* : ${user.id}\n*Username* : ${user.uniqueId}\n*Nickname* : ${user.nickname}\n*Followers* : ${stats.followerCount}\n*Followings* : ${stats.followingCount}\n*Posts* : ${stats.videoCount}\n*Luv* : ${stats.heart}\n`
@@ -328,6 +335,7 @@ async function starts() {
 					var gbl7 = gh.split("|")[0];
 					var gbl8 = gh.split("|")[1];
 					if (args.length < 1) return reply(`Kirim perintah ${prefix}snowwrite teks1|teks2, contoh ${prefix}snowwrite aqulzz|galuh`)
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/snowwrite?text1=${gbl7}&text2=${gbl8}&apikey=apivinz`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
@@ -338,6 +346,7 @@ async function starts() {
 					var gbl5 = gh.split("|")[0];
 					var gbl6 = gh.split("|")[1];
 					if (args.length < 1) return reply(`Kirim perintah ${prefix}marvellogo teks1|teks2, contoh ${prefix}marvellogo aqulzz|galuh`)
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/marvellogo?text1=${gbl5}&text2=${gbl6}&apikey=apivinz`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
@@ -346,11 +355,13 @@ async function starts() {
 
 				case 'artinama':
                   client.updatePresence(from, Presence.composing) 
+                  if (!isDaftar) return reply(mess.only.daftarB)
                     data = await fetchJson(`https://arugaz.herokuapp.com/api/artinama?nama=${body.slice(10)}`)
                    reply(data.result)
                    break
 		case 'infonomor':
                client.updatePresence(from, Presence.composing) 
+                 if (!isDaftar) return reply(mess.only.daftarB)
                  if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}infonomor 0812345678`)
                 data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infonomor?no=${body.slice(11)}`)
                 if (data.error) return reply(data.error)
