@@ -3,6 +3,7 @@
 * Author nya Radya and Nazwa
 * Tambahin ya zhayank
 * Jan numpang nama doank
+* Baca readme nya biar gk tanya tanya
 */
 const {
     WAConnection,
