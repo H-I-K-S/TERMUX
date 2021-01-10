@@ -67,6 +67,8 @@ Follow The Steps Below!
 ```
 
 ## Features
+|  REGISTER USER |
+
 
 |  MAKER  |                                           YES |
 | :---------------------------------------------: | :-----------: |
