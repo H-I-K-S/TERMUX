@@ -82,6 +82,8 @@ Follow The Steps Below!
 | Black Pink Logo Maker|✅|
 | 3D Text Maker|✅|
 | Quote Maker|✅|
+| Water Maker|✅|
+| Fire Text Maker
 | Marvel Logo Maker|✅|
 | Snow Write Maker|✅|
 | Ninja Logo Maker|✅|
@@ -172,6 +174,7 @@ Follow The Steps Below!
 | List Kode Negara|✅|
 | Information Weather|✅|
 | KBBI|✅|
+| Fakta|✅|
 | Covid|✅|
 
 | 18+ | YES |
