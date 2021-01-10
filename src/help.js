@@ -30,6 +30,7 @@ const help = (prefix, botname, oname) => {
   │
   ├─ ❏ ${prefix}wiki
   ├─ ❏ ${prefix}wikien
+  ├─ ❏ ${prefix}nulis
   └─ ❏ ${prefix}artinama
 ◪ *TANYA*
   │
