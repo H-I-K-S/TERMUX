@@ -77,6 +77,8 @@ Follow The Steps Below!
 | Black Pink Logo Maker|✅|
 | 3D Text Maker|✅|
 | Quote Maker|✅|
+| Marvel Logo Maker|✅|
+| Snow Write Maker|✅|
 
 | MEDIA | YES |
 | :-----------------: | :-------: |
@@ -139,6 +141,7 @@ Follow The Steps Below!
 | STALK | YES |
 | :-----------------: | :-------: |
 | Instagram Stalk|✅|
+| Tiktok Stalk|✅|
 
 | WIBU | YES |
 | :-----------------: | :-------: |
@@ -157,6 +160,11 @@ Follow The Steps Below!
 | List Kode Negara|✅|
 | KBBI|✅|
 | Covid|✅|
+
+| 18+ | YES |
+| :-----------------: | :-------: |
+| Random Hentai|✅|
+
 
 | OWNER | YES |
 | :-----------------: | :-------: |
