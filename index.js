@@ -1172,7 +1172,7 @@ async function starts() {
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isDaftar) return reply(mess.only.daftarB)
-					if (!isGroupAdmins) return reply(admij only)
+					if (!isGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('ketik enable untuk mengaktifkan')
 					if (Number(args[0]) === enable) {
 						if (isWelkom) return reply('fitur sudah aktif')
