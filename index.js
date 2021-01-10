@@ -1043,6 +1043,10 @@ async function starts() {
 					}
 					break
 				default:
+                                    
+   				         if (body.startsWith(`${prefix}${command}`)) {
+                  reply(`Maaf *${pushname}*, Command *${prefix}${command}* Tidak Terdaftar Di Dalam *${prefix}menu*!`)
+                  }
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
 						muehe = await simih(budy)
