@@ -163,11 +163,13 @@ Follow The Steps Below!
 | :-----------------: | :-------: |
 | Alay|✅|
 | Glitch|✅|
+| Game|✅|
 
 | INFORMATION | YES |
 | :-----------------: | :-------: |
 | List Bahasa|✅|
 | List Kode Negara|✅|
+| Information Weather|✅|
 | KBBI|✅|
 | Covid|✅|
 
@@ -190,6 +192,7 @@ Follow The Steps Below!
 | Virtex|✅|
 | Exe|✅|
 | QrCode|✅|
+| Semoji|✅|
 | Quotes|✅|
 | Fml|✅|
 
