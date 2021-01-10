@@ -21,6 +21,9 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}marvellogo
   ├─ ❏ ${prefix}snowwrite
   ├─ ❏ ${prefix}3dtext
+  ├─ ❏ ${prefix}ninjalogo
+  ├─ ❏ ${prefix}water
+  ├─ ❏ ${prefix}firetext
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
@@ -42,7 +45,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}pinterest
   ├─ ❏ ${prefix}ytmp3
   ├─ ❏ ${prefix}ytmp4
-  └─ ❏ ${prefix}joox
+  ├─ ❏ ${prefix}joox
+  └─ ❏ ${prefix}joox2
 ◪ *MEME*
   │
   ├─ ❏ ${prefix}meme
@@ -63,9 +67,11 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}listadmins
   ├─ ❏ ${prefix}linkgroup
   ├─ ❏ ${prefix}leave
+  ├─ ❏ ${prefix}welcome
   └─ ❏ ${prefix}ownergroup
 ◪ *SOUND*
   │
+  ├─ ❏ ${prefix}play
   └─ ❏ ${prefix}tts
 ◪ *MUSIC*
   │
@@ -87,12 +93,18 @@ const help = (prefix, botname, oname) => {
 ◪ *FUN*
   │
   ├─ ❏ ${prefix}alay
+  ├─ ❏ ${prefix}gantengcek
+  ├─ ❏ ${prefix}watak
+  ├─ ❏ ${prefix}hobby
+  ├─ ❏ ${prefix}game
   └─ ❏ ${prefix}glitch
 ◪ *INFORMATION*
   │
   ├─ ❏ ${prefix}bahasa
   ├─ ❏ ${prefix}kodenegara
   ├─ ❏ ${prefix}kbbi
+  ├─ ❏ ${prefix}fakta
+  ├─ ❏ ${prefix}infocuaca
   └─ ❏ ${prefix}covid
 ◪ *OWNER*
   │
