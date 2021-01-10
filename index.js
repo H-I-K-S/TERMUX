@@ -222,6 +222,13 @@ async function starts() {
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
+                                case 'randomhentai'
+                                        gatauda = body.slice(6)
+                                        reply(mess.wait)
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
+                                        buffer = await getBuffer(anu.result)
+                                        client.sendMessage(from, buffer, image, {quoted: mek})
+                                        break
                   case 'promote':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
