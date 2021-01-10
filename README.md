@@ -167,6 +167,9 @@ Follow The Steps Below!
 | Alay|✅|
 | Glitch|✅|
 | Game|✅|
+| Cek Ganteng|✅|
+| Watak|✅|
+| Random Hobby|✅|
 
 | INFORMATION | YES |
 | :-----------------: | :-------: |
