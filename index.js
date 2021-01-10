@@ -1180,6 +1180,15 @@ async function starts() {
 						reply('𝐤𝐞𝐭𝐢𝐤 enable 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐠𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧, disable 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐨𝐧𝐚𝐤𝐭𝐢𝐟𝐤𝐚𝐧 𝐟𝐢𝐭𝐮𝐫')
 					}
                                         break
+                                case 'ytmp3':
+				if (args.length < 1) return reply('link YouTube nya mana?')
+					tels = body.slice(7)				
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/yta?url=${tels}&apikey=BotWeA`, {method: 'get'})
+					buffer = await getBuffer(anu.thumb)
+					hasil = `Judul ➼* ${anu.title}\n*Filesize ➼* ${anu.filesize}\n*Tipe ➼* ${anu.ext}\n*Link ➼* ${anu.result}`					
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: hasil})
+					break		
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isDaftar) return reply(mess.only.daftarB)
