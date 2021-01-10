@@ -108,6 +108,7 @@ Follow The Steps Below!
 | Ytmp3 Downloader|✅|
 | Ytmp4 Downloader|✅|
 | Joox Downloader|✅|
+| Joox2 Downloader|✅|
 
 | MEME | YES |
 | :-----------------: | :-------: |
