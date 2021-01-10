@@ -209,6 +209,7 @@ async function starts() {
                break
 				case 'demote':
 					client.updatePresence(from, Presence.composing) 
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -228,6 +229,7 @@ async function starts() {
 					break
                                 case 'randomhentai'
                                         gatauda = body.slice(6)
+                                        if (!isDaftar) return reply(mess.only.daftarB)
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
