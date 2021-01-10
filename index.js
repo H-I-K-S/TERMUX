@@ -438,6 +438,16 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
+				case 'nulis': 
+				case 'tulis': ini
+					if (args.length < 1) return reply('𝐚𝐤𝐮 𝐬𝐮𝐫𝐮𝐡 𝐧𝐮𝐥𝐢𝐬 𝐚𝐩𝐚 𝐤𝐚𝐤? 𝐓𝐲𝐭𝐝 𝐤𝐚𝐡!')
+					teks = body.slice(7)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nulis?text=halo&apikey=BotWeA`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					buff = await getBuffer(anu.result)
+					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})
+					break
 	case 'kbbi':
             client.updatePresence(from, Presence.composing) 
                 if (args.length < 1) return reply(`Masukan Pertanyaan\nContoh : ${prefix}kbbi asu`)
