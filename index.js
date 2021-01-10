@@ -234,7 +234,7 @@ async function starts() {
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
-                                case 'randomhentai'
+                                case 'randomhentai':
                                         gatauda = body.slice(6)
                                         if (!isDaftar) return reply(mess.only.daftarB)
                                         reply(mess.wait)
