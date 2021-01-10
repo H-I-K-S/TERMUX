@@ -467,7 +467,7 @@ async function starts() {
 					break
 				case 'nulis': 
 				case 'tulis': ini
-					if (args.length < 1) return reply('𝐚𝐤𝐮 𝐬𝐮𝐫𝐮𝐡 𝐧𝐮𝐥𝐢𝐬 𝐚𝐩𝐚 𝐤𝐚𝐤? 𝐓𝐲𝐭𝐝 𝐤𝐚𝐡!')
+					if (args.length < 1) return reply('𝐚𝐤𝐮 𝐬𝐮𝐫𝐮𝐡 𝐧𝐮𝐥𝐢𝐬 𝐚𝐩𝐚 𝐤𝐚𝐤?')
                                         if (!isDaftar) return reply(mess.only.daftarB)
 					teks = body.slice(7)
 					reply(mess.wait)
@@ -575,6 +575,7 @@ async function starts() {
 				case 'listadmins':
 				case 'adminlist':
 					client.updatePresence(from, Presence.composing) 
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
 					teks = `List admin of group *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
 					no = 0
@@ -636,6 +637,7 @@ async function starts() {
 				case 'tagall':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
@@ -757,11 +759,13 @@ async function starts() {
 					break
 				case 'alay':
                     client.updatePresence(from, Presence.composing) 
+                    if (!isDaftar) return reply(mess.only.daftarB)
                     data = await fetchJson(`https://arugaz.herokuapp.com/api/bapakfont?kata=${body.slice(6)}`)
                     reply(data.result)
                     break
                     case 'quotemaker':
                     gh = body.slice(12)
+                    if (!isDaftar) return reply(mess.only.daftarB)
                     teks1 = gh.split("|")[0];
                     teks2 = gh.split("|")[1];
                     teks3 = gh.split("|")[2]
@@ -771,9 +775,10 @@ async function starts() {
                     break
                     case 'glitch':
                     gh = body.slice(8)
+                    if (!isDaftar) return reply(mess.only.daftarB)
                     teks1 = gh.split("|")[0];
                     teks2 = gh.split("|")[1];
-                    data = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}`)
+                    data = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}&apikey=BotWeA`)
                     hasil = await getBuffer(data.result)
                     client.sendMessage(from, hasil, image, {quoted: mek, caption: 'neh...'})
                     break
@@ -791,12 +796,14 @@ async function starts() {
 
 				case 'chord':
 					if (args.length < 1) return reply('judul lagunya mana kak')
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					tels = body.slice(7)					
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/chord?q=${tels}`, {method: 'get'})
 					reply(anu.result)
 					break
 				case 'lirik':
 					if (args.length < 1) return reply('Lirik lagunya mana kak?')
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					tels = body.slice(7)
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/lirik?judul=${tels}`, {method: 'get'})
 					reply(anu.result)
@@ -823,6 +830,7 @@ async function starts() {
 					break
            case 'nekonime':
            data = await fetchJson('https://waifu.pics/api/sfw/neko')
+           if (!isDaftar) return reply(mess.only.daftarB)
            hasil = await getBuffer(data.url)
            client.sendMessage(from, hasil, image, {quoted: mek})
            break
@@ -884,6 +892,7 @@ async function starts() {
 				case 'linkgc':
 				    client.updatePresence(from, Presence.composing) 
 				    if (!isGroup) return reply(mess.only.group)
+                                     if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					linkgc = await client.groupInviteCode (from)
 					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Group *${groupName}*`
@@ -925,6 +934,7 @@ async function starts() {
 					break
                case 'apakah':
                client.updatePresence(from, Presence.composing) 
+
                random = apakah[Math.floor(Math.random() * (apakah.length))]
   	
 			   hasil = `Pertanyaan : *${body.slice(1)}*\n\nJawaban : *${random}*`
@@ -932,6 +942,7 @@ async function starts() {
 			   break
               case 'bisakah':
                 client.updatePresence(from, Presence.composing) 
+              if (!isDaftar) return reply(mess.only.daftarB)
                 random = bisakah[Math.floor(Math.random() * (bisakah.length))]
   	
 			   hasil = `Pertanyaan : *${body.slice(1)}*\n\nJawaban : *${random}*`
@@ -939,14 +950,15 @@ async function starts() {
 			   break
                case 'rate':
               client.updatePresence(from, Presence.composing) 
+              if (!isDaftar) return reply(mess.only.daftarB)
                 random = `${Math.floor(Math.random() * 100)}`
                hasil = `Pertanyaan : *${body.slice(1)}*\n\nJawaban : *${random}%*`
               reply(hasil)
                 break
 	    case 'kapankah':
                client.updatePresence(from, Presence.composing) 
+                if (!isDaftar) return reply(mess.only.daftarB)
                random = kapankah[Math.floor(Math.random() * (kapankah.length))]
-  	
                random2 = `${Math.floor(Math.random() * 8)}`
                hasil = `Pertanyaan : *${body.slice(1)}*\n\nJawaban : *${random2} ${random}*`
               reply(hasil)
@@ -984,6 +996,7 @@ async function starts() {
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
+                                                if (!isDaftar) return reply(mess.only.daftarB)
 						ran = getRandom('.webp')
 						await ffmpeg(`./${media}`)
 							.input(media)
@@ -1035,7 +1048,8 @@ async function starts() {
 				case 'animehug':
 					ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug', {method: 'get'})
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug&apikey=BotWeA', {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -1048,6 +1062,7 @@ async function starts() {
 
 				case 'toimg':
 				    client.updatePresence(from, Presence.composing)
+                                    if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isQuotedSticker) return reply('❌ reply stickernya um ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1063,6 +1078,7 @@ async function starts() {
 					break
                 	case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
+                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (!isQuotedVideo) return reply('❌ reply videonya um ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1079,6 +1095,7 @@ async function starts() {
 
                 case 'ninjalogo':
                       if (args.length < 1) return reply('Teks nya mana?')
+                      if (!isDaftar) return reply(mess.only.daftarB)
                       gh = body.slice(11)
                       gl1 = gh.split("|")[0];
                       gl2 = gh.split("|")[1];
@@ -1090,6 +1107,7 @@ async function starts() {
                          case 'play':
                 reply(mess.wait)
                 anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=yourapikey`)
+               if (!isDaftar) return reply(mess.only.daftarB)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nDurasi : ${anu.result.duration}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
                 buffer = await getBuffer(anu.result.thumb)
@@ -1097,7 +1115,7 @@ async function starts() {
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                      case 'joox':
+                      case 'joox2':
                 reply(mess.wait)
                 data = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=BotWeA`, {method: 'get'})
                if (data.error) return reply(data.error)
@@ -1109,12 +1127,14 @@ async function starts() {
                 break
                      case 'infocuaca':
                    anu = await fetchJson(`http://tobz-cuaca.herokuapp.com/?menu=cuaca&wilayah=${body.slice(6)}&apiKey=SLpvUgOcMYwIx0pFeELt`, {method: 'get'})
+                   if (!isDaftar) return reply(mess.only.daftarB)
                    if (anu.error) return reply(anu.error)
                    hasil = ` *Tempat : ${anu.tempat}\nCuaca : ${anu.cuaca}\nAngin : ${anu.angin}\nSuhu : ${anu.suhu}\nKelembapan : ${anu.kelembapan}`
                    client.sendMessage(from, hasil, text, {quoted: mek})
                    break
                               case 'game':
 					anu = await fetchJson(`http://rt-files.000webhostapp.com/tts.php?apikey=rasitech`, {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.desk, text, {quoted: mek}) // ur cods
 					}, 30000) // 1000 = 1s,
@@ -1144,6 +1164,7 @@ async function starts() {
 					break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 						reply(mess.wait)
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						media = await client.downloadMediaMessage(encmedia)
