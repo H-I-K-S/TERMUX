@@ -1,3 +1,8 @@
+/*
+* Tambahin nama author lah
+* Author nya Radya and Nazwa
+* Tambahin ya zhayank
+*/
 const {
     WAConnection,
     MessageType,
