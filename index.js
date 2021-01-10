@@ -370,8 +370,8 @@ async function starts() {
                 reply(hasil)
                 break
 		case 'spamcall':
-               client.updatePresence(from, Presence.composing) 
-               if (!isPremium) return reply(mess.only.premi)
+               client.updatePresence(from, Presence.composing)
+                 if (!isDaftar) return reply(mess.only.daftarB)
                  if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}spamcall 812345678`)
                 data = await fetchJson(`https://arugaz.herokuapp.com/api/spamcall?no=${body.slice(10)}`)
                 if (data.msg) return reply(data.msg)
@@ -380,11 +380,13 @@ async function starts() {
                 break
                    case 'map':
                    data = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`)
+                   if (!isDaftar) return reply(mess.only.daftarB)
                    hasil = await getBuffer(data.gambar)
                    client.sendMessage(from, hasil, image, {quoted: mek, caption: `Hasil Dari *${body.slice(5)}*`})
                    break
                    case 'covid':
                    client.updatePresence(from, Presence.composing) 
+                   if (!isDaftar) return reply(mess.only.daftarB)
                    data = await fetchJson(`https://arugaz.herokuapp.com/api/corona?country=${body.slice(7)}`)
                    if (data.result) reply(data.result)
                    hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
@@ -392,20 +394,23 @@ async function starts() {
                    break
 				case 'wiki':
 					if (args.length < 1) return reply('𝐦𝐚𝐬𝐮𝐤𝐤𝐚𝐧 𝐤𝐚𝐭𝐚 𝐤𝐮𝐧𝐜𝐢')
-					tels = body.slice(6)					
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${tels}`, {method: 'get'})
+					tels = body.slice(6)	
+                                        if (!isDaftar) return reply(mess.only.daftarB)				
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${tels}&apikey=BotWeA`, {method: 'get'})
 					reply(anu.result)
 					break	
 				case 'wikien':
 					if (args.length < 1) return reply('𝐦𝐚𝐬𝐮𝐤𝐤𝐚𝐧 𝐤𝐚𝐭𝐚 𝐤𝐮𝐧𝐜𝐢')
-					tels = body.slice(8)					
+					tels = body.slice(8)		
+			                if (!isDaftar) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/wikien?q=${tels}`, {method: 'get'})
 					reply(anu.result)
 					break				
 				case 'ytmp3':
 					if (args.length < 1) return reply('Urlnya mana um?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/yta?url=${args[0]}&apiKey=${apiKey}`, {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
+     					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/yta?url=${args[0]}&apiKey=${apiKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*Title* : ${anu.title}\n*Filesize* : ${anu.filesize}`
 					thumb = await getBuffer(anu.thumb)
@@ -418,12 +423,14 @@ async function starts() {
 					tels = body.slice(7)				
 					reply(mess.wait)
 					buffer = await getBuffer(anu.thumb)
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ytv?url=${tels}`, {method: 'get'})
+				 	anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ytv?url=${tels}&apikey=BotWeA`, {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					hasil = `*❏ Judul* : ${anu.title}\n*❏ Filesize* : ${anu.filesize}\n*❏ resolution* : ${anu.resolution}\n*❏ Tipe* : ${anu.ext}\n*❏ Link* : ${anu.result}`					
 					client.sendMessage(from, buffer, image,  {quoted: mek, caption: hasil})
 					break							
 				case 'trendtwit':
 					client.updatePresence(from, Presence.composing) 
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/trendingtwitter`, {method: 'get'})
 					teks = '=================\n'
 					for (let i of data.result) {
@@ -444,6 +451,7 @@ async function starts() {
 					break
 				case 'semoji':
 					if (args.length < 1) return reply('emojinya mana um?')
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(8).trim()
@@ -460,6 +468,7 @@ async function starts() {
 				case 'nulis': 
 				case 'tulis': ini
 					if (args.length < 1) return reply('𝐚𝐤𝐮 𝐬𝐮𝐫𝐮𝐡 𝐧𝐮𝐥𝐢𝐬 𝐚𝐩𝐚 𝐤𝐚𝐤? 𝐓𝐲𝐭𝐝 𝐤𝐚𝐡!')
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					teks = body.slice(7)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nulis?text=halo&apikey=BotWeA`, {method: 'get'})
@@ -471,7 +480,7 @@ async function starts() {
             client.updatePresence(from, Presence.composing) 
                 if (args.length < 1) return reply(`Masukan Pertanyaan\nContoh : ${prefix}kbbi asu`)
 	      tels = body.slice(6)
-              data = await fetchJson(`https://tobz-api.herokuapp.com/api/kbbi?kata=${tels}`)
+              data = await fetchJson(`https://tobz-api.herokuapp.com/api/kbbi?kata=${tels}&apikey=BotWeA`)
               if (data.error) return reply(data.error)
               hasil = `${data.result}`
               reply(hasil)
@@ -479,6 +488,7 @@ async function starts() {
 				case 'joox':
 			tels = body.slice(6)
                 data = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${tels}`, {method: 'get'})
+               if (!isDaftar) return reply(mess.only.daftarB)
                if (data.error) return reply(data.error)
                  infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${data.result.judul}\nAlbum : ${data.result.album}\nDipublikasi : ${data.result.dipublikasi}`
                 buffer = await getBuffer(data.result.thumb)
@@ -514,6 +524,7 @@ async function starts() {
 					ranp = getRandom('.gif')
 					rano = getRandom('.webp')
 					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry', {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -526,6 +537,7 @@ async function starts() {
 				case 'neonime':
 					client.updatePresence(from, Presence.composing) 
 					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/neonime_lastest`, {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					teks = '################\n'
 					for (let i of data.result) {
 						teks += `*Title* : ${i.judul}\n*link* : ${i.link}\n*rilis* : ${i.rilis}\n###############\n`
@@ -536,11 +548,13 @@ async function starts() {
               
                   if (args.length < 1) return reply(`Masukan Teks\nContoh : ${prefix}Caliph Bot`)
                 data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
+                if (!isDaftar) return reply(mess.only.daftarB)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
                 break
 				case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Kode bahasanya mana om?', text, {quoted: mek})
+                                   if (!isDaftar) return reply(mess.only.daftarB)
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'Textnya mana om', text, {quoted: mek})
 					dtt = body.slice(8)
@@ -573,6 +587,7 @@ async function starts() {
 				case 'pokemon':
                     client.updatePresence(from, Presence.composing) 
 					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=pokemon`, {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					reply(mess.wait)
 					n = JSON.parse(JSON.stringify(data));
 					nimek =  n[Math.floor(Math.random() * n.length)];
@@ -582,6 +597,7 @@ async function starts() {
                 case 'pinterest':
 					client.updatePresence(from, Presence.composing) 
 					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=${body.slice(11)}`, {method: 'get'})
+                                        if (!isDaftar) return reply(mess.only.daftarB)
 					reply(mess.wait)
 					n = JSON.parse(JSON.stringify(data));
 					nimek =  n[Math.floor(Math.random() * n.length)];
