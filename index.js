@@ -45,11 +45,6 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
 prefix = '.'
 blocked = []
 
-const config = {
-        botname: 'BocchiBot', // Your Name Bot
-        oname: 'NAZWA' // Your Name
-}
-
 function kyun(seconds){
   function pad(s){
     return (s < 10 ? '0' : '') + s;
@@ -203,7 +198,7 @@ async function starts() {
 				case 'help':
 				case 'menu':
 					hisil = fs.readFileSync('./assets/menuimg.jpg')
-					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix, botname, oname), text})
+					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
 					break
                 case 'bahasa':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
