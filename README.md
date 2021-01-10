@@ -148,6 +148,7 @@ Follow The Steps Below!
 | Neonime|✅|
 | Pokemon|✅|
 | Nekonime|✅|
+| Loli|✅|
 
 | FUN | YES |
 | :-----------------: | :-------: |
@@ -164,7 +165,6 @@ Follow The Steps Below!
 | 18+ | YES |
 | :-----------------: | :-------: |
 | Random Hentai|✅|
-
 
 | OWNER | YES |
 | :-----------------: | :-------: |
