@@ -1168,8 +1168,8 @@ async function starts() {
 					if (!isGroup) return reply(mess.only.group)
                                         /*if (!isDaftar) return reply(mess.only.daftarB)*/
 					if (!isGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('ketik enable untuk mengaktifkan')
-					if (Number(args[0]) === enable) {
+					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
+					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('fitur sudah aktif')
 						welkom.push(from)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
@@ -1179,7 +1179,7 @@ async function starts() {
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
 						reply('❬ SUCCSESS ❭ menonaktifkan fitur welcome di group ini')
 					} else {
-						reply('ketik enable untuk mengaktifkan, disable untuk menonaktifkan fitur')
+						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
 					}
                                         break
                                 case 'fakta':
