@@ -1068,7 +1068,7 @@ async function starts() {
                    hasil = ` *Tempat : ${anu.tempat}\nCuaca : ${anu.cuaca}\nAngin : ${anu.angin}\nSuhu : ${anu.suhu}\nKelembapan : ${anu.kelembapan}`
                    client.sendMessage(from, hasil, text, {quoted: mek})
                    break
-                        case 'game':
+                              case 'game':
 					anu = await fetchJson(`http://rt-files.000webhostapp.com/tts.php?apikey=rasitech`, {method: 'get'})
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.desk, text, {quoted: mek}) // ur cods
@@ -1085,6 +1085,17 @@ async function starts() {
 					setTimeout( () => {
 					client.sendMessage(from, anu.result.soal, text, { quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
+					break
+                                case 'daftar':
+					client.updatePresence(from, Presence.composing)
+					if (isDaftar) return reply('kamu sudah terdaftar')
+					if (args.length < 1) return reply(`Parameter Salah\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Caliph|12`)
+					var reg = body.slice(8)
+					var jeneng = reg.split("|")[0];
+					var umure = reg.split("|")[1];
+						user.push(sender)
+						fs.writeFileSync('./src/daftar.json', JSON.stringify(user))
+						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
 					break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
