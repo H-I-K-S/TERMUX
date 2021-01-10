@@ -733,6 +733,7 @@ async function starts() {
 					client.sendMessage(from, 'Sayonara👋', text) // ur cods
 					}, 0)
                      break
+
 				case 'chord':
 					if (args.length < 1) return reply('judul lagunya mana kak')
 					tels = body.slice(7)					
@@ -855,6 +856,7 @@ async function starts() {
 						reply('Foto aja mas')
 					}
 					break
+
 				case 'bugreport':
 				client.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply('Bugnya apa kak?')
@@ -988,6 +990,7 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
+
 				case 'toimg':
 				    client.updatePresence(from, Presence.composing)
 					if (!isQuotedSticker) return reply('❌ reply stickernya um ❌')
@@ -1018,6 +1021,7 @@ async function starts() {
 						fs.unlinkSync(ran)
 					})
 					break
+
                 case 'ninjalogo':
                       if (args.length < 1) return reply('Teks nya mana?')
                       gh = body.slice(11)
@@ -1028,6 +1032,16 @@ async function starts() {
                       buff = await getBuffer(anu.result)
                       client.sendMessage(from, buff, image, {quoted: mek})
                       break
+                         case 'play':
+                reply(mess.wait)
+                anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=yourapikey`)
+               if (anu.error) return reply(anu.error)
+                 infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nDurasi : ${anu.result.duration}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
+                buffer = await getBuffer(anu.result.thumb)
+                lagu = await getBuffer(anu.result.mp3)
+                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
+                break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						reply(mess.wait)
