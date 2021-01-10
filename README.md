@@ -25,6 +25,7 @@
 <summary>🍙 Help me!</summary>
 
 * [Saweria](https://saweria.co/nazwas)
+* [Trakteer](https://trakteer.id/NazwaS)
 </details>
 
 ## Tools
