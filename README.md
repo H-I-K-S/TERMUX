@@ -92,6 +92,7 @@ Follow The Steps Below!
 | EDUCATION | YES |
 | :-----------------: | :-------: |
 | The Meaning Of The Name|✅|
+| Nulis|✅|
 
 | ASK | YES |
 | :-----------------: | :-------: |
