@@ -218,9 +218,9 @@ async function starts() {
 					if (mentioned.length > 1) {
 						teks = 'Perintah di terima, menghapus jabatan sebagai admin :\n'
 						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
+							teks += `${_.split('@')[0]}\n`
 						}
-						mentions(teks, mentioned, true)
+						mentions(teks, mentioned, true
 						client.groupDemoteAdmin(from, mentioned)
 					} else {
 						mentions(`Perintah di terima, menghapus jabatan sebagai admin : @${mentioned[0].split('@')[0]}`, mentioned, true)
