@@ -84,6 +84,7 @@ Follow The Steps Below!
 | Quote Maker|✅|
 | Marvel Logo Maker|✅|
 | Snow Write Maker|✅|
+| Ninja Logo Maker|✅|
 
 | MEDIA | YES |
 | :-----------------: | :-------: |
@@ -134,6 +135,7 @@ Follow The Steps Below!
 | SOUND | YES |
 | :-----------------: | :-------: |
 | Text To Speach|✅|
+| Play|✅|
 
 | MUSIC | YES |
 | :-----------------: | :-------: |
