@@ -132,6 +132,7 @@ Follow The Steps Below!
 | Show List Admins|✅|
 | Leave Group|✅|
 | Show Owner Group|✅|
+| welcome New Members|✅|
 
 | SOUND | YES |
 | :-----------------: | :-------: |
