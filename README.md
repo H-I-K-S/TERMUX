@@ -69,7 +69,7 @@ Follow The Steps Below!
 
 ## Features
 
-|  REGISTER USER |✅|
+|  REGISTER USER | Yes|
 | :---------------------------------------------: |
 
 |  MAKER  |                                           YES |
