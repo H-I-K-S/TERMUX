@@ -2,6 +2,7 @@
 * Tambahin nama author lah
 * Author nya Radya and Nazwa
 * Tambahin ya zhayank
+* Jan numpang nama doank
 */
 const {
     WAConnection,
