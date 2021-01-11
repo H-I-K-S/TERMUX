@@ -88,6 +88,8 @@ Follow The Steps Below!
 | Marvel Logo Maker|✅|
 | Snow Write Maker|✅|
 | Ninja Logo Maker|✅|
+| Logo Wolf Maker|✅|
+| Logo Wolf Maker2|✅|
 
 | MEDIA | YES |
 | :-----------------: | :-------: |
@@ -136,6 +138,7 @@ Follow The Steps Below!
 | Leave Group|✅|
 | Show Owner Group|✅|
 | welcome New Members|✅|
+| Nsfw|✅|
 
 | SOUND | YES |
 | :-----------------: | :-------: |
