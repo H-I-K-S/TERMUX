@@ -97,6 +97,10 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}waifu
   ├─ ❏ ${prefix}randomanime
   └─ ❏ ${prefix}nekonime
+◪ *18+*
+  |
+  ├─ ❏ ${prefix}randomhentai
+  └─ ❏ ${prefix}nsfwneko
 ◪ *FUN*
   │
   ├─ ❏ ${prefix}alay
