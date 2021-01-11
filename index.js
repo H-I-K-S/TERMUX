@@ -1,6 +1,6 @@
 /*
 * Tambahin nama author lah
-* Author nya Radya and Nazwa
+* Author nya Radya, Farid, and Nazwa
 * Tambahin ya zhayank
 * Jan numpang nama doank
 * Baca readme nya biar gk tanya tanya
@@ -549,7 +549,7 @@ async function starts() {
               
                   if (args.length < 1) return reply(`Masukan Teks\nContoh : ${prefix}Caliph Bot`)
                 data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
-                if (!isDaftar) return reply(mess.only.daftarB)
+                if (!iUser) return reply(mess.only.daftarB)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
                 break
 				case 'tts':
