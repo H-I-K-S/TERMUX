@@ -168,6 +168,8 @@ Follow The Steps Below!
 | Nekonime|✅|
 | Loli|✅|
 | Random Shota|✅|
+| Random Waifu|✅|
+| Random Anime|✅|
 
 | FUN | YES |
 | :-----------------: | :-------: |
