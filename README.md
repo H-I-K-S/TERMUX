@@ -162,6 +162,7 @@ Follow The Steps Below!
 | Pokemon|✅|
 | Nekonime|✅|
 | Loli|✅|
+| Random Shota|✅|
 
 | FUN | YES |
 | :-----------------: | :-------: |
