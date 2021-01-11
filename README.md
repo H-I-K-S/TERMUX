@@ -192,6 +192,7 @@ Follow The Steps Below!
 | 18+ | YES |
 | :-----------------: | :-------: |
 | Random Hentai|✅|
+| NSFW Neko|✅|
 
 | OWNER | YES |
 | :-----------------: | :-------: |
