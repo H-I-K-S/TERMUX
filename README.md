@@ -100,6 +100,8 @@ Follow The Steps Below!
 | :-----------------: | :-------: |
 | The Meaning Of The Name|✅|
 | Nulis|✅|
+| Quotes|✅|
+| Quotes2|✅|
 
 | ASK | YES |
 | :-----------------: | :-------: |
@@ -205,7 +207,6 @@ Follow The Steps Below!
 | Exe|✅|
 | QrCode|✅|
 | Semoji|✅|
-| Quotes|✅|
 | Fml|✅|
 
 ---
