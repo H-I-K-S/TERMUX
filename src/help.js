@@ -24,6 +24,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}ninjalogo
   ├─ ❏ ${prefix}water
   ├─ ❏ ${prefix}firetext
+  ├─ ❏ ${prefix}logowolf
+  ├─ ❏ ${prefix}logowolf2
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
@@ -34,6 +36,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}wiki
   ├─ ❏ ${prefix}wikien
   ├─ ❏ ${prefix}nulis
+  ├─ ❏ ${prefix}quotes
+  ├─ ❏ ${prefix}quotes2
   └─ ❏ ${prefix}artinama
 ◪ *TANYA*
   │
@@ -68,6 +72,7 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}linkgroup
   ├─ ❏ ${prefix}leave
   ├─ ❏ ${prefix}welcome
+  ├─ ❏ ${prefix}nsfw
   └─ ❏ ${prefix}ownergroup
 ◪ *SOUND*
   │
@@ -89,6 +94,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}neonime
   ├─ ❏ ${prefix}pokemon
   ├─ ❏ ${prefix}loli
+  ├─ ❏ ${prefix}waifu
+  ├─ ❏ ${prefix}randomanime
   └─ ❏ ${prefix}nekonime
 ◪ *FUN*
   │
@@ -97,6 +104,7 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}watak
   ├─ ❏ ${prefix}hobby
   ├─ ❏ ${prefix}game
+  ├─ ❏ ${prefix}bucin
   └─ ❏ ${prefix}glitch
 ◪ *INFORMATION*
   │
@@ -120,7 +128,6 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}virtex
   ├─ ❏ ${prefix}exe
   ├─ ❏ ${prefix}qrcode
-  ├─ ❏ ${prefix}quotes
   └─ ❏ ${prefix}fml
 ◪ *OWNER_NAME2*
 `
