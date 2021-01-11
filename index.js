@@ -1240,7 +1240,7 @@ async function starts() {
                                 case 'nsfwneko':
 				    try{
 						if (!isNsfw) return reply('❌ *NSFW MATI* ❌')
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko&apikey=BotWeA`, {method: 'get'})
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
 						buffer = await getBuffer(res.result)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'mesum'})
 					} catch (e) {
