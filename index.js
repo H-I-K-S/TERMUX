@@ -1258,6 +1258,43 @@ async function starts() {
 						reply('❌ *ERROR* ❌')
 					}
 					break
+				case 'logowolf':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf Aris|Ganss`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=wolflogo1&text1=${teks1}&text2=${teks2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break				
+                                 case 'nsfw':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
+					if (Number(args[0]) === 1) {
+						if (isNsfw) return reply('fitur sudah aktif')
+						nsfw.push(from)
+						fs.writeFileSync('./src/nsfw.json', JSON.stringify(nsfw))
+						reply('❬ SUCCSESS ❭ mengaktifkan fitur nsfw di group ini')
+					} else if (Number(args[0]) === 0) {
+						nsfw.splice(from, 1)
+						fs.writeFileSync('./src/nsfw.json', JSON.stringify(nsfw))
+						reply('❬ SUCCSESS ❭ menonaktifkan fitur nsfw di group ini')
+					} else {
+						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
+					}
+					break	
+				case 'bucin':
+					gatauda = body.slice(7)					
+					anu = await fetchJson(`https://arugaz.herokuapp.com/api/howbucins`, {method: 'get'})
+					reply(anu.desc)
+					break	
+				case 'quotes2':
+					gatauda = body.slice(8)					
+					anu = await fetchJson(`https://arugaz.herokuapp.com/api/randomquotes`, {method: 'get'})
+					reply(anu.quotes)
+					break		
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
