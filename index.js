@@ -778,7 +778,7 @@ async function starts() {
                     hasil = await getBuffer(data.result)
                     client.sendMessage(from, hasil, image, {quoted: mek, caption: 'neh...'})
                     break
-                    /*case 'glitch':
+                    case 'glitch':
                     gh = body.slice(8)
                     if (!isUser) return reply(mess.only.daftarB)
                     teks1 = gh.split("|")[0];
@@ -786,7 +786,7 @@ async function starts() {
                     data = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
                     hasil = await getBuffer(data.result)
                     client.sendMessage(from, hasil, image, {quoted: mek, caption: 'neh...'})
-                    break*/
+                    break
                      case 'leave':
                     if (!isGroup) return reply(mess.only.group)
                     if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1308,6 +1308,22 @@ async function starts() {
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break						
+                                case 'husbu':
+                                        gatauda = body.slice(13)
+					reply(mess.wait)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/husbu?apikey=BotWeA`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'husbu2':
+					gatauda = body.slice(13)
+					reply(mess.wait)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/husbu2?apikey=BotWeA`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
 				case 'logowolf2':
 					var gh = body.slice(11)
 					var teks1 = gh.split("|")[0];
