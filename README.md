@@ -170,6 +170,8 @@ Follow The Steps Below!
 | Random Shota|✅|
 | Random Waifu|✅|
 | Random Anime|✅|
+| Random Husbu|✅|
+| Random Husbu2|✅|
 
 | FUN | YES |
 | :-----------------: | :-------: |
