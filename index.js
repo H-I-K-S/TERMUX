@@ -1240,6 +1240,7 @@ async function starts() {
                                 case 'nsfwneko':
 				    try{
 						if (!isNsfw) return reply('❌ *NSFW MATI* ❌')
+                                                if (!isUser) return reply(mess.only.daftarB)
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
 						buffer = await getBuffer(res.result)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'mesum'})
@@ -1252,6 +1253,7 @@ async function starts() {
 				    try{
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/randomshota?apikey=BotWeA`, {method: 'get'})
 						buffer = await getBuffer(res.result)
+                                                if (!isUser) return reply(mess.only.daftarB)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nich'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
@@ -1298,6 +1300,7 @@ async function starts() {
 			    case 'waifu':
 					gatauda = body.slice(7)
 					reply(mess.wait)
+                                        if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/nekonime`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image,{quoted: mek})
@@ -1305,6 +1308,7 @@ async function starts() {
 				case 'randomanime':
 					gatauda = body.slice(13)
 					reply(mess.wait)
+                                        if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
@@ -1314,11 +1318,19 @@ async function starts() {
 					var teks1 = gh.split("|")[0];
 					var teks2 = gh.split("|")[1];
 					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf Nazwa|Canss`)
+                                        if (!isUser) return reply(mess.only.daftarB)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=wolflogo2&text1=${teks1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break	
+                                case 'delete':
+					case 'del':
+					if (!isGroup)return reply(mess.only.group)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					if (!isGroupAdmins)return reply(mess.only.admin)
+					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
