@@ -4,7 +4,11 @@
 * Tambahin ya zhayank
 * Jan numpang nama doank
 * Baca readme nya biar gk tanya tanya
+
+- What's New?
+* Fixing Some Error & Some Bugs
 */
+
 const {
     WAConnection,
     MessageType,
