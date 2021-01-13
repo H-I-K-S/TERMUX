@@ -40,6 +40,8 @@ const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const speed = require('performance-now')
 const user = JSON.parse(fs.readFileSync('./src/user.json'))
+const _leveling = JSON.parse(fs.readFileSync('./src/leveling.json'))
+const _level = JSON.parse(fs.readFileSync('./src/level.json'))
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Nazwa🖤\n' // full name
