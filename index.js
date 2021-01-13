@@ -471,7 +471,7 @@ async function starts() {
 					})
 					break
 				case 'nulis': 
-				case 'tulis': ini
+				case 'tulis':
 					if (args.length < 1) return reply('aku suruh nulis apa kak?')
                                         if (!isUser) return reply(mess.only.daftarB)
 					teks = body.slice(7)
@@ -927,17 +927,18 @@ async function starts() {
 					}
 					break
 
-				case 'bugreport':
-				client.updatePresence(from, Presence.composing) 
-				if (args.length < 1) return reply('Bugnya apa kak?')
-					tek = body.slice(10)
-					bug = {
-					text: `*[BUG REPORT]*\n\n*Pengirim :* @${sender.split("@")[0]}\n*Pada Jam :* ${time}\n*Pesan :* ${tek}`,
-					contextInfo: { mentionedJid: [sender] }
-					}
-					client.sendMessage(nomorOwner, bug, text, {quoted: mek})
-					client.sendMessage(from, 'Laporan mu telah dikirim ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.', text, {quoted: mek})
-					break
+                      case 'bugreport':
+                     const pesan = body.slice(5)
+                      if (pesan.length > 300) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
+                        var nomor = mek.participant
+                       const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
+                      var options = {
+                         text: teks1,
+                         contextInfo: {mentionedJid: [nomor]},
+                     }
+                    client.sendMessage(ownerNumber, options, text, {quoted: mek})
+                    reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
+                    break
                case 'apakah':
                client.updatePresence(from, Presence.composing) 
 
