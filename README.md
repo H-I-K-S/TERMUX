@@ -84,7 +84,7 @@ Follow The Steps Below!
 | 3D Text Maker|✅|
 | Quote Maker|✅|
 | Water Maker|✅|
-| Fire Text Maker
+| Fire Text Maker|✅|
 | Marvel Logo Maker|✅|
 | Snow Write Maker|✅|
 | Ninja Logo Maker|✅|
