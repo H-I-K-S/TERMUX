@@ -70,9 +70,10 @@ Follow The Steps Below!
 
 ## Features
 
-| NEW USER | YES
+| unique features | YES
 | :---------------------------------------------: | :-----------: |
 |  Register Name And Age|✅|
+|         Leveling    |✅|
 
 |  MAKER  |                                           YES |
 | :---------------------------------------------: | :-----------: |
