@@ -1,4 +1,4 @@
-const help = (prefix, botname, oname) => {
+const help = (prefix) => {
 	return `
 「 *BOT_NAME* 」
 
