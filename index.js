@@ -6,7 +6,7 @@
 * Baca readme nya biar gk tanya tanya
 
 - What's New?
-* Fixing Some Error & Some Bugs
+* Added New Features
 */
 
 const {
