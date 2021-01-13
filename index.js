@@ -51,6 +51,74 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
 prefix = '.'
 blocked = []
 
+const getLevelingXp = (userId) => {
+            let position = false
+            Object.keys(_level).forEach((i) => {
+                if (_level[i].jid === userId) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                return _level[position].xp
+            }
+        }
+
+        const getLevelingLevel = (userId) => {
+            let position = false
+            Object.keys(_level).forEach((i) => {
+                if (_level[i].jid === userId) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                return _level[position].level
+            }
+        }
+
+        const getLevelingId = (userId) => {
+            let position = false
+            Object.keys(_level).forEach((i) => {
+                if (_level[i].jid === userId) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                return _level[position].jid
+            }
+        }
+
+        const addLevelingXp = (userId, amount) => {
+            let position = false
+            Object.keys(_level).forEach((i) => {
+                if (_level[i].jid === userId) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                _level[position].xp += amount
+                fs.writeFileSync('./src/level.json', JSON.stringify(_level))
+            }
+        }
+
+        const addLevelingLevel = (userId, amount) => {
+            let position = false
+            Object.keys(_level).forEach((i) => {
+                if (_level[i].jid === userId) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                _level[position].level += amount
+                fs.writeFileSync('./src/level.json', JSON.stringify(_level))
+            }
+        }
+
+        const addLevelingId = (userId) => {
+            const obj = {jid: userId, xp: 1, level: 1}
+            _level.push(obj)
+            fs.writeFileSync('./src/level.json', JSON.stringify(_level))
+        }
+
 function kyun(seconds){
   function pad(s){
     return (s < 10 ? '0' : '') + s;
