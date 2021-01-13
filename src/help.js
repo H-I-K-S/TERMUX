@@ -26,6 +26,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}firetext
   ├─ ❏ ${prefix}logowolf
   ├─ ❏ ${prefix}logowolf2
+  ├─ ❏ ${prefix}phlogo
+  ├─ ❏ ${prefix}glitch
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
@@ -111,7 +113,8 @@ const help = (prefix, botname, oname) => {
   ├─ ❏ ${prefix}hobby
   ├─ ❏ ${prefix}game
   ├─ ❏ ${prefix}bucin
-  └─ ❏ ${prefix}glitch
+  ├─ ❏ ${prefix}trust
+  └─ ❏ ${prefix}dare
 ◪ *INFORMATION*
   │
   ├─ ❏ ${prefix}bahasa
