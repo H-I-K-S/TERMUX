@@ -211,6 +211,10 @@ async function starts() {
 			mess = {
 				wait: '⌛ Sedang di Prosess ⌛',
 				success: '✔️ Berhasil ✔️',
+                                levelon: '❬ ✔ ❭ *enable leveling*',
+				leveloff: ' ❬ X ❭  *disable leveling*',
+				levelnoton: '❬ X ❭ *leveling not aktif*',
+				levelnol: '*LEVEL KAKAK MASIH* 0 °-°',
 				error: {
 					stick: '[❗] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
 					Iv: '❌ Link tidak valid ❌'
@@ -258,6 +262,25 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
+
+	        //function leveling
+            if (isGroup && isLevelingOn) {
+            const currentLevel = getLevelingLevel(sender)
+            const checkId = getLevelingId(sender)
+            try {
+                if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
+                const amountXp = Math.floor(Math.random() * 10) + 500
+                const requiredXp = 5000 * (Math.pow(2, currentLevel) - 1)
+                const getLevel = getLevelingLevel(sender)
+                addLevelingXp(sender, amountXp)
+                if (requiredXp <= getLevelingXp(sender)) {
+                    addLevelingLevel(sender, 1)
+                    await reply(`*「 LEVEL UP 」*\n\n➸ *Name*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongrats!! 🎉🎉`)
+                }
+            } catch (err) {
+                console.error(err)
+            }
+        }
 
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
@@ -1435,6 +1458,46 @@ async function starts() {
 					tod = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
 					client.sendMessage(from, tod, image, { quoted: mek, caption: '*Dare*\n\n'+ der })
 					break	
+                case 'level':
+                if (!isLevelingOn) return reply(mess.levelnoton)
+                if (!isGroup) return reply(mess.only.group)
+                const userLevel = getLevelingLevel(sender)
+                const userXp = getLevelingXp(sender)
+                if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
+                sem = sender.replace('@s.whatsapp.net','')
+                resul = `┏`
+               client.sendMessage(from, resul, text, { quoted: mek})
+                .catch(async (err) => {
+                        console.error(err)
+                        await reply(`Error!\n${err}`)
+                    })
+            break
+				case 'fitnah':	
+				case 'fake':          
+               if (!isGroup) return reply(mess.only.group)
+                arg = body.substring(body.indexOf(' ') + 1)
+				isi = arg.split(' |')[0] 
+				pesan = arg.split('|')[1] 
+				pesan2 = arg.split('|')[2] 
+                reply(pesan, isi, pesan2)
+                break
+                case 'leveling':
+                if (!isGroup) return reply(mess.only.group)
+                if (!isGroupAdmins) return reply(mess.only.admin)
+                if (args.length < 1) return reply('Boo :𝘃')
+                if (args[0] === '1') {
+                    if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
+                    _leveling.push(groupId)
+                    fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
+                     reply(mess.levelon)
+                } else if (args[0] === '0') {
+                    _leveling.splice(groupId, 1)
+                    fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
+                     reply(mess.leveloff)
+                } else {
+                    reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
+                }
+            break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
