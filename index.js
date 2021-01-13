@@ -928,10 +928,10 @@ async function starts() {
 					break
 
                       case 'bugreport':
-                     const pesan = body.slice(5)
+                     const bug = body.slice(5)
                       if (pesan.length > 300) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
                         var nomor = mek.participant
-                       const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
+                       teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
                       var options = {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
