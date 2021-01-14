@@ -91,6 +91,10 @@ Follow The Steps Below!
 | Ninja Logo Maker|✅|
 | Logo Wolf Maker|✅|
 | Logo Wolf Maker2|✅|
+| Neon Logo Maker|✅|
+| Neon Logo Maker2|✅|
+| Lion Logo Maker|✅|
+| Joker Logo Maker|✅|
 
 | MEDIA | YES |
 | :-----------------: | :-------: |
@@ -191,11 +195,14 @@ Follow The Steps Below!
 | KBBI|✅|
 | Fakta|✅|
 | Covid|✅|
+| Earthquake Information|✅|
+| Ping|✅|
 
 | 18+ | YES |
 | :-----------------: | :-------: |
 | Random Hentai|✅|
 | NSFW Neko|✅|
+| NSFW Trap|✅|
 
 | OWNER | YES |
 | :-----------------: | :-------: |
