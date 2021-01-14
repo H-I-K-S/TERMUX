@@ -28,6 +28,10 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}logowolf2
   ├─ ❏ ${prefix}phlogo
   ├─ ❏ ${prefix}glitch
+  ├─ ❏ ${prefix}neonlogo
+  ├─ ❏ ${prefix}neonlogo2
+  ├─ ❏ ${prefix}lionlogo
+  ├─ ❏ ${prefix}jokerlogo
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
@@ -75,6 +79,8 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}leave
   ├─ ❏ ${prefix}welcome
   ├─ ❏ ${prefix}nsfw
+  ├─ ❏ ${prefix}leveling
+  ├─ ❏ ${prefix}level
   └─ ❏ ${prefix}ownergroup
 ◪ *SOUND*
   │
@@ -104,6 +110,7 @@ const help = (prefix) => {
 ◪ *18+*
   |
   ├─ ❏ ${prefix}randomhentai
+  ├─ ❏ ${prefix}nsfwtrap
   └─ ❏ ${prefix}nsfwneko
 ◪ *FUN*
   │
@@ -122,6 +129,8 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}kbbi
   ├─ ❏ ${prefix}fakta
   ├─ ❏ ${prefix}infocuaca
+  ├─ ❏ ${prefix}infogempa
+  ├─ ❏ ${prefix}ping
   └─ ❏ ${prefix}covid
 ◪ *OWNER*
   │
