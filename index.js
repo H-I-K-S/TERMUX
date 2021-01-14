@@ -1517,6 +1517,9 @@ async function starts() {
                                                 reply('❌ *ERROR* ❌')
                                         }
                                         break
+                                case 'ping':
+                                        await client.sendMessage(from, `Pong!!!\nSpeed: ${processTime(time, moment())} _Second_`)
+                                        break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -1527,7 +1530,7 @@ async function starts() {
 							client.sendMessage(from, res.video, video, {quoted: mek, caption: res.teks.trim()})
 						}).catch(err => {
 							reply(err)
-						})
+		      				})
 					} else {
 						reply('Foto aja mas')
 					}
