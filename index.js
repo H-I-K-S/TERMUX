@@ -6,7 +6,7 @@
 * Baca readme nya biar gk tanya tanya
 
 - What's New?
-* Added New Features
+* Fix Errors
 */
 
 const {
@@ -283,6 +283,7 @@ async function starts() {
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
+                        const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
