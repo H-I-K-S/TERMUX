@@ -1506,7 +1506,7 @@ async function starts() {
                 const userXp = getLevelingXp(sender)
                 if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
                 sem = sender.replace('@s.whatsapp.net','')
-                resul = `◪ *LEVEL*\n  ├─ ❏ *Name* : ${sem}\n├─ ❏ *User XP* : ${userXp}\n  └─ ❏ *User Level* : ${userLevel}`
+                resul = `◪ *LEVEL*\n  ├─ ❏ *Name* : ${sem}\n  ├─ ❏ *User XP* : ${userXp}\n  └─ ❏ *User Level* : ${userLevel}`
                client.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
                         console.error(err)
