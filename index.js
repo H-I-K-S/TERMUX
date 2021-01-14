@@ -1529,6 +1529,15 @@ async function starts() {
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         break
+                                case 'neonlogo2':
+                                        var gh = body.slice(9)
+                                        teks1 = gh.split("|")[0];
+                                        if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}neonlogo2 NazwaCanss')
+                                        reply(mess.wait)
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_technology&text=${text1}&apikey=BotWeA`, {method: 'get'})
+                                        buffer = await getBuffer(anu.result)
+                                        client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
+                                        break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
