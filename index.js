@@ -16,14 +16,18 @@ const {
     Mimetype,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
+
+/******BEGIN OF FILE INPUT******/
 const { color, bgcolor } = require('./lib/color')
-const { help } = require('./src/help')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
+/******END OF FILE INPUT******/
+
+/******BEGIN OF NPM PACKAGE INPUT******/
 const fs = require('fs')
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
@@ -35,22 +39,52 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
+const speed = require('performance-now')
+/******END OF NPM PACKAGE INPUT******/
+
+/******BEGIN OF JSON INPUT******/
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
-const speed = require('performance-now')
 const user = JSON.parse(fs.readFileSync('./src/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./src/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./src/level.json'))
+/******END OF JSON INPUT******/
+
+/******LOAD OF MENU INPUT******/
+const { help } = require('./src/help')
+//const { makermenu } = require('./database/menu/makermenu')
+//const { mediamenu } = require('./database/menu/mediamenu')
+//const { educationmenu } = require('./database/menu/educationmenu')
+//const { downloadermenu } = require('./database/menu/downloadermenu')
+//const { mememenu } = require('./database/menu/mememenu')
+//const { kerangmenu } = require('./database/menu/kerangmenu')
+//const { groupmenu } = require('./database/menu/groupmenu')
+//const { soundmenu } = require('./database/menu/soundmenu')
+//const { musicmenu } = require('./database/menu/musicmenu')
+//const { islammenu } = require('./database/menu/islammenu')
+//const { stalkmenu } = require('./database/menu/stalkmenu')
+//const { wibumenu } = require('./database/menu/wibumenu')
+//const { funmenu } = require('./database/menu/funmenu')
+//const { informationmenu } = require('./database/menu/informationmenu')
+//const { 18+menu } require('./database/menu/18+menu')
+//const { ownermenu } require('./database/menu/ownermenu')
+//const { othermenu } require('./database/menu/othermenu')
+/******END OF MENU INPUT******/
+
+/******LOAD OF VCARD INPUT******/
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Nazwa🖤\n' // full name
             + 'ORG:Owner Bot;\n' // the organization of the contact
             + 'TEL;type=CELL;type=VOICE;waid=12542123926:+1 (254) 212-3926\n' // WhatsApp ID + phone number
             + 'END:VCARD'
+/******END OF VCARD INPUT******/
+
 prefix = '.'
 blocked = []
 
+/******BEGIN OF FUNCTIONS INPUT******/
 const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
@@ -291,12 +325,18 @@ async function starts() {
 			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+ 
+       /******END OF FUNCTIONS INPUT******/
 			switch(command) {
 				case 'help':
 				case 'menu':
 					hisil = fs.readFileSync('./assets/menuimg.jpg')
 					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
 					break
+                                /*case 'makermenu':
+                                        hisil = fs.readFileSync('./src/makerimg.jpg')
+                                        client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text
+                                        break*/
                 case 'bahasa':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
                 break
