@@ -1538,6 +1538,15 @@ async function starts() {
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         break
+                                case 'lionlogo':
+                                        var gh = body.slice(11)
+                                        var teks1 = gh.split("|")[0];
+                                        var teks2 = gh.split("|")[1];
+                                        if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}lionlogo Nazwa|Canss')
+                                        reply(mess.wait)
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=lionlogo&text1=${text1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
+                                        client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
+                                        break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
