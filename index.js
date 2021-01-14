@@ -1499,7 +1499,7 @@ async function starts() {
                 }
             break
                                 case 'infogempa':
-                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/infogempa?apikey=BotWeA`, {method: 'get'})
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/infogempa?apikey=BotWeA`, {method: 'get'})
                                         if (!isUser) return reply(mess.only.daftarB)
                                         if (anu.error) return reply(anu.error)
                                         hasil = `*Kedalaman* : ${anu.kedalaman}\n*Koordinat* : ${anu.koordinat}\n*Lokasi* : ${anu.lokasi}\n*Magnitude* : ${anu.magnitude}\n*Map* : ${anu.map}\n*Potensi* : ${anu.potensi}\n*Waktu* : ${anu.waktu}`
@@ -1519,6 +1519,15 @@ async function starts() {
                                         break
                                 case 'ping':
                                         await client.sendMessage(from, `Pong!!!\nSpeed: ${processTime(time, moment())} _Second_`)
+                                        break
+                                case 'neonlogo':
+                                        var gh = body.slice(9)
+                                        var teks1 = gh.split("|")[0];
+                                        if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}neonlogo NazwaCanss')
+                                        reply(mess.wait)
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_light&text=${teks1}&apikey=BotWeA`, {method: 'get'})
+                                        buffer = await getBuffer(anu.result)
+                                        client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
