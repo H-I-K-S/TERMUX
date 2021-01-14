@@ -1498,6 +1498,13 @@ async function starts() {
                     reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
                 }
             break
+                                case 'infogempa':
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/infogempa?apikey=BotWeA`, {method: 'get'})
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        if (anu.error) return reply(anu.error)
+                                        hasil = `*Kedalaman* : ${anu.kedalaman}\n*Koordinat* : ${anu.koordinat}\n*Lokasi* : ${anu.lokasi}\n*Magnitude* : ${anu.magnitude}\n*Map* : ${anu.map}\n*Potensi* : ${anu.potensi}\n*Waktu* : ${anu.waktu}`
+                                        client.sendMessage(from, hasil, text, {quoted:mek})
+                                        break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
