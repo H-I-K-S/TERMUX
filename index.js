@@ -1440,7 +1440,7 @@ async function starts() {
 					var gh = body.slice(9)
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
-					if (args.length < 1) return reply('Teksnya mana um')
+					if (args.length < 1) return reply('Teksnya mana um\nContoh: ${prefix}phlogo |Nazwa|Canss')
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
@@ -1504,6 +1504,18 @@ async function starts() {
                                         if (anu.error) return reply(anu.error)
                                         hasil = `*Kedalaman* : ${anu.kedalaman}\n*Koordinat* : ${anu.koordinat}\n*Lokasi* : ${anu.lokasi}\n*Magnitude* : ${anu.magnitude}\n*Map* : ${anu.map}\n*Potensi* : ${anu.potensi}\n*Waktu* : ${anu.waktu}`
                                         client.sendMessage(from, hasil, text, {quoted:mek})
+                                        break
+                                case 'nsfwtrap':
+                                        try{
+                                                if (!isNsfw) return reply('❌ *NSFW MATI* ❌')
+                                                if (!isUser) return reply(mess.only.daftarB)
+                                                res = await fetchJson(`https://tobz-api.herokuapp.com/nsfwtrap?apikey=BotWeA`, {method: 'get'})
+                                                buffer = await getBuffer(res.result)
+                                                client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya kak...'})
+                                        } catch (e) {
+                                                console.log(`*Error* :`, color(e,'red'))
+                                                reply('❌ *ERROR* ❌')
+                                        }
                                         break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
