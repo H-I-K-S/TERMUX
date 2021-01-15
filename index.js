@@ -51,7 +51,7 @@ const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 /******END OF JSON INPUT******/
 
-/******LOAD OF MENU INPUT******/
+/******BEGIN OF MENU INPUT******/
 const { help } = require('./src/help')
 /*const { makermenu } = require('./database/menu/makermenu')
 const { mediamenu } = require('./database/menu/mediamenu')
@@ -81,8 +81,11 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'END:VCARD'
 /******END OF VCARD INPUT******/
 
+/******BEGIN OF SETTINGS INPUT******/
+const BarBarKey = 'YOUR_APIKEY'
 prefix = '.'
 blocked = []
+/******END OF SETTINGS INPUT******/
 
 /******BEGIN OF FUNCTIONS INPUT******/
 const getLevelingXp = (userId) => {
