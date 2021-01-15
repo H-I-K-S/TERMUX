@@ -82,7 +82,7 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
 /******END OF VCARD INPUT******/
 
 /******BEGIN OF SETTINGS INPUT******/
-const BarBarKey = 'YOUR_APIKEY'
+//const BarBarKey = 'YOUR_APIKEY'
 prefix = '.'
 blocked = []
 /******END OF SETTINGS INPUT******/
