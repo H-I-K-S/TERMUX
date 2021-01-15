@@ -130,7 +130,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _level[position].xp += amount
-                fs.writeFileSync('./src/level.json', JSON.stringify(_level))
+                fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
             }
         }
 
@@ -143,14 +143,14 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _level[position].level += amount
-                fs.writeFileSync('./src/level.json', JSON.stringify(_level))
+                fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
             }
         }
 
         const addLevelingId = (userId) => {
             const obj = {jid: userId, xp: 1, level: 1}
             _level.push(obj)
-            fs.writeFileSync('./src/level.json', JSON.stringify(_level))
+            fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
         }
 
 function kyun(seconds){
@@ -1292,7 +1292,7 @@ async function starts() {
 					var jeneng = reg.split("|")[0];
 					var umure = reg.split("|")[1];
 						user.push(sender)
-						fs.writeFileSync('./src/user.json', JSON.stringify(user))
+						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
 						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
 					break
                                 case 'welcome':
@@ -1303,11 +1303,11 @@ async function starts() {
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('fitur sudah aktif')
 						welkom.push(from)
-						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
+						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
 						reply('❬ SUCCSESS ❭ mengaktifkan fitur welcome di group ini')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, disable)
-						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
+						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
 						reply('❬ SUCCSESS ❭ menonaktifkan fitur welcome di group ini')
 					} else {
 						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
@@ -1408,11 +1408,11 @@ async function starts() {
 					if (Number(args[0]) === 1) {
 						if (isNsfw) return reply('fitur sudah aktif')
 						nsfw.push(from)
-						fs.writeFileSync('./src/nsfw.json', JSON.stringify(nsfw))
+						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
 						reply('❬ SUCCSESS ❭ mengaktifkan fitur nsfw di group ini')
 					} else if (Number(args[0]) === 0) {
 						nsfw.splice(from, 1)
-						fs.writeFileSync('./src/nsfw.json', JSON.stringify(nsfw))
+						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
 						reply('❬ SUCCSESS ❭ menonaktifkan fitur nsfw di group ini')
 					} else {
 						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
@@ -1523,18 +1523,18 @@ async function starts() {
 				pesan2 = arg.split('|')[2] 
                 reply(pesan, isi, pesan2)
                 break
-                case 'leveling':
+            case 'leveling':
                 if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
                 if (args.length < 1) return reply('Ketik 1 untuk mengaktifkan fitur')
                 if (args[0] === '1') {
                     if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
                     _leveling.push(groupId)
-                    fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
+                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
                      reply(mess.levelon)
                 } else if (args[0] === '0') {
                     _leveling.splice(groupId, 1)
-                    fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
+                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
                      reply(mess.leveloff)
                 } else {
                     reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
