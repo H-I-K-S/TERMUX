@@ -1751,6 +1751,13 @@ async function starts() {
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kpopnya kak...'})
                                         break
+                                case 'fml2':
+                                        getauda = body.slice(6)
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        data = await fetchJson(`https://tobz-api.herokuapp.com/randomfmylife?apikey=BotWeA`, {method: 'get'})
+                                        hasil = `*Fuck My Life*\n${data.result}`
+                                        reply(hasil)
+                                        break
 			 	case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
