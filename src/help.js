@@ -32,10 +32,23 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}neonlogo2
   ├─ ❏ ${prefix}lionlogo
   ├─ ❏ ${prefix}jokerlogo
+  ├─ ❏ ${prefix}shadow
+  ├─ ❏ ${prefix}burnpaper
+  ├─ ❏ ${prefix}coffee
+  ├─ ❏ ${prefix}lovepaper
+  ├─ ❏ ${prefix}woodblock
+  ├─ ❏ ${prefix}qowheart
+  ├─ ❏ ${prefix}mutgrass
+  ├─ ❏ ${prefix}undergocean
+  ├─ ❏ ${prefix}woodenboards
+  ├─ ❏ ${prefix}wolfmetal
+  ├─ ❏ ${prefix}metalictglow
+  ├─ ❏ ${prefix}8bit
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
   ├─ ❏ ${prefix}trendtwit
+  ├─ ❏ ${prefix}randomkpop
   └─ ❏ ${prefix}ytsearch
 ◪ *EDUCATION*
   │
@@ -81,6 +94,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}nsfw
   ├─ ❏ ${prefix}leveling
   ├─ ❏ ${prefix}level
+  ├─ ❏ ${prefix}delete
   └─ ❏ ${prefix}ownergroup
 ◪ *SOUND*
   │
@@ -131,6 +145,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}infocuaca
   ├─ ❏ ${prefix}infogempa
   ├─ ❏ ${prefix}ping
+  ├─ ❏ ${prefix}jadwaltvnow
   └─ ❏ ${prefix}covid
 ◪ *OWNER*
   │
@@ -146,7 +161,9 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}virtex
   ├─ ❏ ${prefix}exe
   ├─ ❏ ${prefix}qrcode
-  └─ ❏ ${prefix}fml
+  ├─ ❏ ${prefix}afk
+  ├─ ❏ ${prefix}fml
+  └─ ❏ ${prefix}fml2
 ◪ *OWNER_NAME2*
 `
 }
