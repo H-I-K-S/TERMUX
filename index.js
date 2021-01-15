@@ -1605,6 +1605,12 @@ async function starts() {
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         break
+                                case 'jadwaltvnow':  
+				if (!isUser) return reply(mess.only.daftarB)
+                               reply(mess.wait)
+		               anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/jadwaltvnow?&apiKey=administrator`, {method: 'get'})
+			       reply(anu.result.jadwalTV)
+					break
 				case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
