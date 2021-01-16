@@ -251,6 +251,7 @@ Follow The Steps Below!
 | FML|✅|
 | FML2|✅|
 | Afk|✅|
+| Timer|✅|
 
 ---
 
