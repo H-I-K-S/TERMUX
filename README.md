@@ -255,3 +255,9 @@ Follow The Steps Below!
 ---
 
 <img src="https://raw.githubusercontent.com/NazwaS/NazwaS/main/img/tenor.gif">
+
+---
+
+## Special Thanks To
+
+- [RyzRdy](https://github.com/RyzRdy)
