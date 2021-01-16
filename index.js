@@ -335,11 +335,11 @@ async function starts() {
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
+					client.sendMessage(from, help(prefix), text)
 					break
                                 /*case 'makermenu':
                                         hisil = fs.readFileSync('./src/makerimg.jpg')
-                                        client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text
+                                        client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text})
                                         break*/
                 case 'bahasa':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
