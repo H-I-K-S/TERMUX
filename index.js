@@ -335,7 +335,6 @@ async function starts() {
 			switch(command) {
 				case 'help':
 				case 'menu':
-                                        
 					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
 					break
                                 /*case 'makermenu':
