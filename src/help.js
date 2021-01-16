@@ -10,6 +10,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}info
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
+  ├─ ❏ ${prefix}ping
   └─ ❏ ${prefix}bugreport
 ◪ *MAKER*
   │
@@ -44,6 +45,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}wolfmetal
   ├─ ❏ ${prefix}metalictglow
   ├─ ❏ ${prefix}8bit
+  ├─ ❏ ${prefix}ttp
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
@@ -58,18 +60,19 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}quotes
   ├─ ❏ ${prefix}quotes2
   └─ ❏ ${prefix}artinama
-◪ *TANYA*
+◪ *KERANG AJAIB*
   │
   ├─ ❏ ${prefix}apakah
   ├─ ❏ ${prefix}kapankah
+  ├─ ❏ ${prefix}rate
   └─ ❏ ${prefix}bisakah
 ◪ *DOWNLOADER*
   │
   ├─ ❏ ${prefix}pinterest
   ├─ ❏ ${prefix}ytmp3
   ├─ ❏ ${prefix}ytmp4
-  ├─ ❏ ${prefix}joox
-  └─ ❏ ${prefix}joox2
+  ├─ ❏ ${prefix}tiktok
+  └─ ❏ ${prefix}joox
 ◪ *MEME*
   │
   ├─ ❏ ${prefix}meme
@@ -95,6 +98,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}leveling
   ├─ ❏ ${prefix}level
   ├─ ❏ ${prefix}delete
+  ├─ ❏ ${prefix}simih
   └─ ❏ ${prefix}ownergroup
 ◪ *SOUND*
   │
@@ -120,6 +124,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}randomanime
   ├─ ❏ ${prefix}husbu
   ├─ ❏ ${prefix}husbu2
+  ├─ ❏ ${prefix}wait
   └─ ❏ ${prefix}nekonime
 ◪ *18+*
   |
@@ -135,7 +140,8 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}game
   ├─ ❏ ${prefix}bucin
   ├─ ❏ ${prefix}trust
-  └─ ❏ ${prefix}dare
+  ├─ ❏ ${prefix}dare
+  └─ ❏ ${prefix}simi
 ◪ *INFORMATION*
   │
   ├─ ❏ ${prefix}bahasa
@@ -144,7 +150,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}fakta
   ├─ ❏ ${prefix}infocuaca
   ├─ ❏ ${prefix}infogempa
-  ├─ ❏ ${prefix}ping
   ├─ ❏ ${prefix}jadwaltvnow
   └─ ❏ ${prefix}covid
 ◪ *OWNER*
@@ -153,6 +158,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}block
   ├─ ❏ ${prefix}bc
   ├─ ❏ ${prefix}bcgc
+  ├─ ❏ ${prefix}clone
   └─ ❏ ${prefix}clearall
 ◪ *OTHER*
   │
