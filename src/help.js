@@ -168,6 +168,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}exe
   ├─ ❏ ${prefix}qrcode
   ├─ ❏ ${prefix}afk
+  ├─ ❏ ${prefix}timer
   ├─ ❏ ${prefix}fml
   └─ ❏ ${prefix}fml2
 ◪ *OWNER_NAME2*
