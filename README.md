@@ -261,3 +261,4 @@ Follow The Steps Below!
 ## Special Thanks To
 
 - [RyzRdy](https://github.com/RyzRdy)
+- [Paritsod](https://github.com/Paritsod
