@@ -6,7 +6,7 @@
 * Baca readme nya biar gk tanya tanya
 
 - What's New?
-* Fix Errors
+* Added New Features
 */
 
 const {
@@ -1782,6 +1782,55 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
+                                case 'clearall':
+					if (!isOwner) return reply('Kamu siapa?')
+					anu = await client.chats.all()
+					client.setMaxListeners(25)
+					for (let _ of anu) {
+						client.deleteChat(_.jid)
+					}
+					reply('Sukses delete all chat :)')
+					break
+				case 'simi':
+					if (args.length < 1) return reply('Textnya mana um?')
+					teks = body.slice(5)
+					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
+					//if (anu.error) return reply('Simi ga tau kak')
+					reply(anu)
+					break
+				case 'simih':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Hmmmm')
+					if (Number(args[0]) === 1) {
+						if (isSimi) return reply('Mode simi sudah aktif')
+						samih.push(from)
+						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
+						reply('Sukses mengaktifkan mode simi di group ini ✔️')
+					} else if (Number(args[0]) === 0) {
+						samih.splice(from, 1)
+						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
+						reply('Sukes menonaktifkan mode simi di group ini ✔️')
+					} else {
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+					}
+					break
+				case 'clone':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Tag target yang ingin di clone')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
+					try {
+						pp = await client.getProfilePicture(id)
+						buffer = await getBuffer(pp)
+						client.updateProfilePicture(botNumber, buffer)
+						mentions(`Foto profile Berhasil di perbarui menggunakan foto profile @${id.split('@')[0]}`, [jid], true)
+					} catch (e) {
+						reply('Gagal om')
+					}
+					break
 			 	case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -1798,17 +1847,13 @@ async function starts() {
 					}
 					break
 				default:
-
-   				         if (body.startsWith(`${prefix}${command}`)) {
-                  reply(`Maaf *${pushname}*, Command *${prefix}${command}* Tidak Terdaftar Di Dalam *${prefix}menu*!`)
-                                        }
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
 						muehe = await simih(budy)
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERROR]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
+						console.log(color('[WARN]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
