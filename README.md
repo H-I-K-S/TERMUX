@@ -98,11 +98,30 @@ Follow The Steps Below!
 | Neon Logo Maker2|✅|
 | Lion Logo Maker|✅|
 | Joker Logo Maker|✅|
+| Shadow Image Maker|✅|
+| Burn Papper Image Maker|✅|
+| Coffee Image Maker|✅|
+| Love Papper Image Maker|✅|
+| Wood Block Image Maker|✅|
+| Quotes On Wood Heart Image Maker|✅|
+| Message Under The Grass Image Maker|✅|
+| Underground Ocean Image Maker|✅|
+| Wooden Boards Image Maker|✅|
+| Wolf Metal Image Maker|✅|
+| Metalic Text Glow Image Maker|✅|
+| 8 Bit Image Maker|✅|
+| Text Sticker Maker|✅|
+
+| SimSimi | YES |
+| :-----------------: | :-------: |
+| Simi|✅|
+| Simih|✅|
 
 | MEDIA | YES |
 | :-----------------: | :-------: |
 | Trend Twit|✅|
 | YT Search|✅|
+| Random KPOP|✅|
 
 | EDUCATION | YES |
 | :-----------------: | :-------: |
@@ -124,6 +143,7 @@ Follow The Steps Below!
 | Ytmp4 Downloader|✅|
 | Joox Downloader|✅|
 | Joox2 Downloader|✅|
+| TikTok Downloader|✅|
 
 | MEME | YES |
 | :-----------------: | :-------: |
@@ -149,6 +169,7 @@ Follow The Steps Below!
 | Show Owner Group|✅|
 | welcome New Members|✅|
 | Nsfw|✅|
+| Simih|✅|
 
 | SOUND | YES |
 | :-----------------: | :-------: |
@@ -180,6 +201,7 @@ Follow The Steps Below!
 | Random Anime|✅|
 | Random Husbu|✅|
 | Random Husbu2|✅|
+| What Anime Is This|✅|
 
 | FUN | YES |
 | :-----------------: | :-------: |
@@ -189,6 +211,7 @@ Follow The Steps Below!
 | Cek Ganteng|✅|
 | Watak|✅|
 | Random Hobby|✅|
+| Simi|✅|
 
 | INFORMATION | YES |
 | :-----------------: | :-------: |
@@ -200,6 +223,7 @@ Follow The Steps Below!
 | Covid|✅|
 | Earthquake Information|✅|
 | Ping|✅|
+| Jadwal TV Now|✅|
 
 | 18+ | YES |
 | :-----------------: | :-------: |
@@ -214,6 +238,7 @@ Follow The Steps Below!
 | Broadcast|✅|
 | Group Broadcast|✅|
 | Clear All Chat|✅|
+| Clone Photo Profile Bot|✅|
 
 | OTHER | YES |
 | :-----------------: | :-------: |
@@ -223,7 +248,9 @@ Follow The Steps Below!
 | Exe|✅|
 | QrCode|✅|
 | Semoji|✅|
-| Fml|✅|
+| FML|✅|
+| FML2|✅|
+| Afk|✅|
 
 ---
 
