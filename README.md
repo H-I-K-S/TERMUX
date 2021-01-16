@@ -44,7 +44,12 @@
 - Change vcard WhatsApp id on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L35)
 - Change vcard WhatsApp number on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L80)
 - Change owner number id on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L80)
-- Change menu owner name2 on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/src/help.js#125)
+- Change menu on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/src/help.js)
+- Change BarBarKey on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L289)
+
+---
+
+Get BarBarKey on [this site](https://mhankbarbar.tech)
 
 ---
 
