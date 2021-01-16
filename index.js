@@ -813,7 +813,7 @@ async function starts() {
 						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 BOCCHIBOT 〙', text, {detectLinks: false, quoted: mek})
+					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {detectLinks: false, quoted: mek})
 					break
                         case 'tagall4':
 				client.updatePresence(from, Presence.composing) 
@@ -826,7 +826,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@c.us\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 BOCCHIBOT 〙', text, {quoted: mek})
+					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {quoted: mek})
 					break
                 case 'tagall5':
 				client.updatePresence(from, Presence.composing) 
@@ -839,7 +839,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
 						members_id.push(mem.jid)
 					}
-					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 BOCCHIBOT 〙')
+					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙')
 					break
 				case 'send':
 					var pc = body.slice(6)
@@ -915,7 +915,7 @@ async function starts() {
                     client.sendMessage(from, hasil, image, {quoted: mek, caption: 'neh...'})
                     break
                     case 'glitch':
-                    gh = body.slice(8)
+                    gh = body.slice(7)
                     if (!isUser) return reply(mess.only.daftarB)
                     teks1 = gh.split("|")[0];
                     teks2 = gh.split("|")[1];
@@ -1480,7 +1480,7 @@ async function starts() {
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
                                 case 'phlogo':
-					var gh = body.slice(9)
+					var gh = body.slice(7)
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
 					if (args.length < 1) return reply('Teksnya mana um\nContoh: ${prefix}phlogo |Nazwa|Canss')
@@ -1573,7 +1573,7 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         break
                                 case 'neonlogo2':
-                                        var gh = body.slice(9)
+                                        var gh = body.slice(10)
                                         teks1 = gh.split("|")[0];
                                         if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}neonlogo2 NazwaCanss')
                                         reply(mess.wait)
@@ -1582,7 +1582,7 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         break
                                 case 'lionlogo':
-                                        var gh = body.slice(11)
+                                        var gh = body.slice(9)
                                         var teks1 = gh.split("|")[0];
                                         var teks2 = gh.split("|")[1];
                                         if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}lionlogo Nazwa|Canss')
@@ -1598,7 +1598,7 @@ async function starts() {
                                         reply(anu.result)
                                         break*/
                                 case 'jokerlogo':
-                                        var gh = body.slice(11)
+                                        var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
                                         if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}jokerlogo NazwaCanss')
                                         reply(mess.wait)
@@ -1613,7 +1613,7 @@ async function starts() {
 			       reply(anu.result.jadwalTV)
 					break
                                 case 'afk':
-                                        tels = body.slice(11)
+                                        tels = body.slice(4)
                                         if (args.length < 1) return reply('kakak afk karena apa?')
                                         if (!isUser) return reply(mess.only.daftarB)
                                         var nom = mek.participant
