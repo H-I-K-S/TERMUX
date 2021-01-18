@@ -1,4 +1,4 @@
-const imagemaker = (prefix, botName, ownerBot) => {
+const imagemaker = (prefix, botName, ownerName) => {
         return `
 「 *${botName}* 」
 
