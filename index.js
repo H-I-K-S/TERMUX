@@ -1257,14 +1257,15 @@ case 'timer':
                       buff = await getBuffer(anu.result)
                       client.sendMessage(from, buff, image, {quoted: mek})
                       break
-                         case 'play':
+                         case 'play':   
+	          if (!isUser) return reply(mess.only.userB)
                 reply(mess.wait)
-                anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=${VhtearKey}`)
-               if (!isUser) return reply(mess.only.daftarB)
+                play = body.slice(5)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nDurasi : ${anu.result.duration}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
-                buffer = await getBuffer(anu.result.thumb)
-                lagu = await getBuffer(anu.result.mp3)
+                 infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nSource : ${anu.result.source}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
+                buffer = await getBuffer(anu.result.thumbnail)
+                lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
@@ -1841,6 +1842,17 @@ case 'timer':
 						reply('Gagal om')
 					}
 					break
+                                case 'magernulis':
+                                        var gh = body.slice(11)
+                                        var teks7 = gh.split("|")[0];
+                                        var teks2 = gh.split("|")[1];
+                                        var teks3 = gh.split("|")[2];
+                                        if (args.length < 1) return reply('teks, nama, kelas nya mana kak?\nContoh: ${prefix}magernulis teks|nama|kelas\nContoh pemakaian: ${prefix}magernulis NazwaCanss|Nazwa|10C')
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/joki-nulis?text=${teks7}&nama=${teks2}&kelas=${teks3}&apiKey=administrator`, {method: 'get'})
+                                        buffer = await getBuffer(anu.result.result)
+                                        client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak...'})
+                                        break
 			 	case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
