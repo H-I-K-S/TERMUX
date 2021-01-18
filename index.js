@@ -1842,7 +1842,7 @@ case 'timer':
 						reply('Gagal om')
 					}
 					break
-                                case 'magernulis':
+                                /*case 'magernulis':
                                         var gh = body.slice(11)
                                         var teks7 = gh.split("|")[0];
                                         var teks2 = gh.split("|")[1];
@@ -1852,7 +1852,7 @@ case 'timer':
                                         anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/joki-nulis?text=${teks7}&nama=${teks2}&kelas=${teks3}&apiKey=administrator`, {method: 'get'})
                                         buffer = await getBuffer(anu.result.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak...'})
-                                        break
+                                        break*/
 			 	case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
                                         if (!isUser) return reply(mess.only.daftarB)
