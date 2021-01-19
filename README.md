@@ -263,7 +263,9 @@ Follow The Steps Below!
 
 ## Special Thanks To
 
+- [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys) 
 - [RyzRdy](https://github.com/RyzRdy)
 - [Paritsod](https://github.com/Paritsod)
 - [mrfzvx12](https://github.com/mrfzvx12)
 - [Mr-hadi](https://github.com/Mr-hadi)
+- [MhankBarBar](https://github.com/mhankbarbar)
