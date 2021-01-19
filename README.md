@@ -111,6 +111,8 @@ Follow The Steps Below!
 | Metalic Text Glow Image Maker|✅|
 | 8 Bit Image Maker|✅|
 | Text Sticker Maker|✅|
+| Herry Potter Image Maker|✅|
+| Pubg Logo Maker|✅|
 
 | SimSimi | YES |
 | :-----------------: | :-------: |
