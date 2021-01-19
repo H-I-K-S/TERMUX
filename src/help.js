@@ -46,6 +46,8 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}metalictglow
   ├─ ❏ ${prefix}8bit
   ├─ ❏ ${prefix}ttp
+  ├─ ❏ ${prefix}herrypotter
+  ├─ ❏ ${prefix}pubglogo
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
