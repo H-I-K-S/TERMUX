@@ -1259,7 +1259,7 @@ case 'timer':
                       client.sendMessage(from, buff, image, {quoted: mek})
                       break
                          case 'play':   
-	          if (!isUser) return reply(mess.only.userB)
+	          if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.wait)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
