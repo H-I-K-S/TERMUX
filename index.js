@@ -989,7 +989,7 @@ case 'timer':
 				case 'neko':
 					gatauda = body.slice(6)
 					reply(mess.wait)
-					anu = await fetchJson(`https://arugaz.herokuapp.com/api/nekonime`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nekonime?apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break	
