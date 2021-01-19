@@ -31,6 +31,7 @@ const logomaker = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}qrcode
   ├─ ❏ ${prefix}timer
   ├─ ❏ ${prefix}fml
-  └─ ❏ ${prefix}fml2`
+  └─ ❏ ${prefix}fml2
+◪ *${ownerName}*`
 }
 exports.logomaker = logomaker
