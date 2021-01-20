@@ -481,7 +481,7 @@ case 'timer':
 						reply('username tidak valid')
 					}
 					break
-				case 'snowwrite':
+				case 'snow':
 					var gh = body.slice(11)
 					var gbl7 = gh.split("|")[0];
 					var gbl8 = gh.split("|")[1];
@@ -494,12 +494,10 @@ case 'timer':
 					break
 				case 'marvellogo':
 					var gh = body.slice(12)
-					var gbl5 = gh.split("|")[0];
-					var gbl6 = gh.split("|")[1];
-					if (args.length < 1) return reply(`Kirim perintah ${prefix}marvellogo teks1|teks2, contoh ${prefix}marvellogo aqulzz|galuh`)
+					if (args.length < 1) return reply(`Kirim perintah ${prefix}marvellogo teks, contoh ${prefix}marvellogo Nazwa Canss`)
                                         if (!isUser) return reply(mess.only.daftarB)
 					reply(mess.wait)
-					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/marvellogo?text1=${gbl5}&text2=${gbl6}&apikey=apivinz`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=snow&text=${gh}&apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
