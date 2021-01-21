@@ -31,18 +31,6 @@ const imagemaker = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}wolfmetal
   ├─ ❏ ${prefix}metalictglow
   ├─ ❏ ${prefix}8bit
-  └─ ❏ ${prefix}quotemaker
-◪ *OTHER*
-  │
-  ├─ ❏ ${prefix}send
-  ├─ ❏ ${prefix}wame
-  ├─ ❏ ${prefix}virtex
-  ├─ ❏ ${prefix}exe
-  ├─ ❏ ${prefix}qrcode
-  ├─ ❏ ${prefix}afk
-  ├─ ❏ ${prefix}timer
-  ├─ ❏ ${prefix}fml
-  └─ ❏ ${prefix}fml2
-◪ *${ownerName}*`
+  └─ ❏ ${prefix}quotemaker`
 }
 exports.imagemaker = imagemaker
