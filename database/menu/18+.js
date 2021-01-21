@@ -1,6 +1,7 @@
 const 18+ = (prefix, ownerBot, botName) => {
         return `
 「 *${botName}* 」
+
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
   ❏ Creator: ${ownerBot}
