@@ -30,11 +30,11 @@ const help = (prefix, ownerBot, botName) => {
   ├─ ❏ ${prefix}wibumenu
   ├─ ❏ ${prefix}18+menu
   ├─ ❏ ${prefix}funmenu
-  ├─ ❏ ${prefix}randomreplymenu
   ├─ ❏ ${prefix}todmenu
   ├─ ❏ ${prefix}informationmenu
   ├─ ❏ ${prefix}stayonscreenmenu
-  └─ ❏ ${prefix}ownermenu
+  ├─ ❏ ${prefix}ownermenu
+  └─ ❏ ${prefix}othermenu
 ◪ *OTHER*
   │
   ├─ ❏ ${prefix}send
