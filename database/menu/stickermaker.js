@@ -15,18 +15,6 @@ const stickermaker = (prefix, botName, ownerName) => {
   │
   ├─ ❏ ${prefix}sticker
   ├─ ❏ ${prefix}stickergif
-  └─ ❏ ${prefix}ttp
-◪ *OTHER*
-  │
-  ├─ ❏ ${prefix}send
-  ├─ ❏ ${prefix}wame
-  ├─ ❏ ${prefix}virtex
-  ├─ ❏ ${prefix}exe
-  ├─ ❏ ${prefix}qrcode
-  ├─ ❏ ${prefix}afk
-  ├─ ❏ ${prefix}timer
-  ├─ ❏ ${prefix}fml
-  └─ ❏ ${prefix}fml2
-◪ *${ownerName}*`
+  └─ ❏ ${prefix}ttp`
 }
 exports.stickermaker = stickermaker
