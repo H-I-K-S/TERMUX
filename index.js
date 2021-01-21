@@ -6,7 +6,7 @@
 * Baca readme nya biar gk tanya tanya
 
 - What's New?
-* Added New Features
+* Change Arugaz prefix & Fix Fitnah
 */
 
 const {
@@ -1525,15 +1525,15 @@ case 'timer':
                         await reply(`Error!\n${err}`)
                     })
             break
-				case 'fitnah':	
-				case 'fake':          
-               if (!isGroup) return reply(mess.only.group)
-                arg = body.substring(body.indexOf(' ') + 1)
-				isi = arg.split(' |')[0] 
-				pesan = arg.split('|')[1] 
-				pesan2 = arg.split('|')[2] 
-                reply(pesan, isi, pesan2)
-                break
+				case 'fitnah':
+				if (args.length < 1) return reply(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
+				var gh = body.slice(7)
+				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					var replace = gh.split("|")[0];
+					var target = gh.split("|")[1];
+					var bot = gh.split("|")[2];
+					client.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
+					break
             case 'leveling':
                 if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
