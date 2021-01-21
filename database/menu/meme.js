@@ -1,6 +1,7 @@
 const meme = (prefix, botName, ownerName) => {
 	return `
 「 *${botName}* 」
+
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
   ❏ Creator: ${ownerName}
