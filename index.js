@@ -6,7 +6,7 @@
 * Baca readme nya biar gk tanya tanya
 
 - What's New?
-* Change Arugaz prefix & Fix Fitnah
+* Change Arugaz prefix & Fix Fitnah & Fix Ping
 */
 
 const {
@@ -1570,8 +1570,13 @@ case 'timer':
                                                 reply('❌ *ERROR* ❌')
                                         }
                                         break
-                                case 'ping':
-                                        await client.sendMessage(from, `Pong!!!\nSpeed: ${processTime(time, moment())} _Second_`)
+                                case 'ping':    
+			   	        if (!isUser) return reply(mess.only.userB)
+                                        const timestamp = speed();
+                                        const latensi = speed() - timestamp
+                                        client.updatePresence(from, Presence.composing) 
+				        uptime = process.uptime()
+                                        client.sendMessage(from, `Speed: *${latensi.toFixed(4)} _Second_*\nDevice: *Black Shark 3*\nRAM: *8/128*\nData: *Smartfren*\nJaringan: *4G*\nStatus: *Di Charger*`, text, { quoted: mek})
                                         break
                                 case 'neonlogo':
                                         var gh = body.slice(9)
