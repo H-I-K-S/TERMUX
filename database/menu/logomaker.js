@@ -22,6 +22,7 @@ const logomaker = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}neonlogo
   ├─ ❏ ${prefix}neonlogo2
   ├─ ❏ ${prefix}lionlogo
+  ├─ ❏ ${prefix}pubglogo
   └─ ❏ ${prefix}jokerlogo`
 }
 exports.logomaker = logomaker
