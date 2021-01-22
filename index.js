@@ -1436,7 +1436,7 @@ case 'timer':
 					break	
 				case 'quotes2':
 					gatauda = body.slice(8)					
-					anu = await fetchJson(`https://arugaz.my.id/api/randomquotes`, {method: 'get'})
+					anu = await fetchJson(`https://arugaz.my.id/api/random/text/quotes`, {method: 'get'})
 					reply(anu.quotes)
 					break		
 			    case 'waifu':
@@ -1875,6 +1875,35 @@ case 'timer':
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=harry_potter&text=${gh}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak gambarnya...'})
+                                        break
+                                case 'katabijak':
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        anu = await fetchJson(`https://arugaz.my.id/api/random/text/katabijak`, {method: 'get'})
+                                        reply(anu.result)
+                                        break
+                                case 'faktaunik':
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        anu = await fetchJson(`https://arugaz.my.id/api/random/text/faktaunik`, {method: 'get'})
+                                        reply(anu.result)
+                                        break
+                                case 'fancytext':
+                                        var teks1 = body.slice(10)
+                                        if (args.length < 1) return reply(`teksnya mana um...\nContoh:\n${prefix}fancytext NazwaCanss`)
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        anu = await fetchJson(`https://arugaz.my.id/api/random/text/fancytext?text=${teks1}`, {method: 'get'})
+                                        reply(anu.result)
+                                        break
+                                case 'translate':
+                                        var gl = body.slice(10)
+                                        var lg = gh.split("|")[0];
+                                        var teksnya = gh.split("|")[1];
+                                        if (args.length < 1) return reply(`kode bahasanya mana kak\nContoh:\n${prefix}translate|en|aku nazwa`)
+                                        if (args.length < 2) return reply(`teksnya mana um\nContoh:\n${prefix}translate|en|aku nazwa`)
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        reply(mess.wait)
+                                        anu = await fetchJson(`https://arugaz.my.id/api/edu/translate?lang=${lg}&text=${teksnya}`, {method: 'get'})
+                                        hasil = `*Text* : ${teksnya}\n*Translate* : ${anu.text}\n*Languange* : ${lg}\n*Did You Mean* : ${anu.didYouMean}`
+                                        client.sendMessage(from, hasil, text, {quoted: mek})
                                         break
 			 	case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
