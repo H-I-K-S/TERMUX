@@ -505,7 +505,7 @@ case 'timer':
 				case 'artinama':
                   client.updatePresence(from, Presence.composing) 
                   if (!isUser) return reply(mess.only.daftarB)
-                    data = await fetchJson(`https://arugaz.my.id/api/artinama?nama=${body.slice(10)}`)
+                    data = await fetchJson(`https://arugaz.my.id/api/primbon/artinama?name=${body.slice(10)}`)
                    reply(data.result)
                    break
 		case 'infonomor':
@@ -518,15 +518,6 @@ case 'timer':
                 hasil = `╠➥ internasional : ${data.international}\n╠➥ nomor : ${data.nomor}\n╠➥ operator : ${data.op}`
                 reply(hasil)
                 break
-		case 'spamcall':
-               client.updatePresence(from, Presence.composing)
-                 if (!isUser) return reply(mess.only.daftarB)
-                 if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}spamcall 812345678`)
-                data = await fetchJson(`https://arugaz.my.id/api/spamcall?no=${body.slice(10)}`)
-                if (data.msg) return reply(data.msg)
-                hasil = data.logs
-                reply(hasil)
-                break
                    case 'map':
                    data = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`)
                    if (!isUser) return reply(mess.only.daftarB)
@@ -536,7 +527,7 @@ case 'timer':
                    case 'covidcountry':
                    client.updatePresence(from, Presence.composing) 
                    if (!isUser) return reply(mess.only.daftarB)
-                   data = await fetchJson(`https://arugaz.my.id/api/corona?country=${body.slice(7)}`)
+                   data = await fetchJson(`https://arugaz.my.id/api/edu/corona?country=${body.slice(7)}`)
                    if (data.result) reply(data.result)
                    hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
                    reply(hasil)
@@ -552,7 +543,7 @@ case 'timer':
 					if (args.length < 1) return reply('masukan kata kunci')
 					tels = body.slice(8)		
 			                if (!isUser) return reply(mess.only.daftarB)
-					anu = await fetchJson(`https://arugaz.my.id/api/wikien?q=${tels}`, {method: 'get'})
+					anu = await fetchJson(`https://arugaz.my.id/api/edu/enwiki?query=${tels}`, {method: 'get'})
 					reply(anu.result)
 					break				
 				case 'ytmp3':
@@ -604,7 +595,7 @@ case 'timer':
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(8).trim()
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=${teks}&apikey=${BarBarKey}`, {method: 'get'})
+					anu = await fetchJson(`https://mhankbarbars.tech/api/emoji2png?emoji=${teks}&apikey=${BarBarKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -614,13 +605,12 @@ case 'timer':
 						fs.unlinkSync(rano)
 					})
 					break
-				case 'nulis': 
+				case 'nulis':
 				case 'tulis':
-					if (args.length < 1) return reply('aku suruh nulis apa kak?')
-                                        if (!isUser) return reply(mess.only.daftarB)
+					if (args.length < 1) return reply('Yang mau di tulis apaan?')
 					teks = body.slice(7)
 					reply(mess.wait)
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nulis?text=${teks}&apikey=BotWeA`, {method: 'get'})
+					anu = await fetchJson(`https://mhankbarbar.tech/nulis?text=${teks}&apiKey=${apiKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})
@@ -645,13 +635,6 @@ case 'timer':
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${data.result.title}.mp3`, quoted: mek})
                 break
-				case 'info':
-					me = client.user
-					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}\n*Total Chat* : ${totalchat.length}`
-					buffer = await getBuffer(me.imgUrl)
-					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
-					break
 				case 'blocklist':
 					teks = 'This is list of blocked number :\n'
 					for (let block of blocked) {
@@ -910,7 +893,7 @@ case 'timer':
 				case 'alay':
                     client.updatePresence(from, Presence.composing) 
                     if (!isUser) return reply(mess.only.daftarB)
-                    data = await fetchJson(`https://arugaz.herokuapp.com/api/bapakfont?kata=${body.slice(6)}`)
+                    data = await fetchJson(`https://arugaz.my.id/api/edu/corona?country=indonesia}`)
                     reply(data.result)
                     break
                     case 'quotemaker':
@@ -1428,11 +1411,6 @@ case 'timer':
 					} else {
 						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
 					}
-					break	
-				case 'bucin':
-					gatauda = body.slice(7)					
-					anu = await fetchJson(`https://arugaz.my.id/api/howbucins`, {method: 'get'})
-					reply(anu.desc)
 					break	
 				case 'quotes2':
 					gatauda = body.slice(8)					
