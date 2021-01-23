@@ -33,6 +33,7 @@ const { virtex } = require('./src/virtex')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
+const { ind } = require('./language')
 
 // Load Npm Package
 const fs = require('fs')
