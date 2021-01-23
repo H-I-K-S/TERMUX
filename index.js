@@ -103,6 +103,8 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
 
 prefix = '.'
 blocked = []
+limitawal = '20'
+cr = '*BOT INI SUDAH TERVERIFIKASI*'
 
 /******BEGIN OF FUNCTIONS INPUT******/
 const getLevelingXp = (userId) => {
@@ -171,6 +173,111 @@ const getLevelingXp = (userId) => {
             const obj = {jid: userId, xp: 1, level: 1}
             _level.push(obj)
             fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
+        }
+        const getLimit = (sender) => {
+                let position = false
+              Object.keys(limit).forEach ((i) => {
+                if (limit[position].id === sender) {
+                   position = i
+                  }
+              })
+             if (position !== false) {
+                return limit[position].limit
+            }
+        }
+
+        const getRegisteredRandomId = () => {
+            return _registered[Math.floor(Math.random() * _registered.length)].id
+        }
+
+        const addRegisteredUser = (userid, sender, age, time, serials) => {
+            const obj = { id: userid, name: sender, age: age, time: time, serial: serials }
+            _registered.push(obj)
+            fs.writeFileSync('./database/json/registered.json', JSON.stringify(_registered))
+        }
+
+        const createSerial = (size) => {
+            return crypto.randomBytes(size).toString('hex').slice(0, size)
+        }
+
+        const checkRegisteredUser = (sender) => {
+            let status = false
+            Object.keys(_registered).forEach((i) => {
+                if (_registered[i].id === sender) {
+                    status = true
+                }
+            })
+            return status
+        }
+
+        const addATM = (sender) => {
+                const obj = {id: sender, uang : 0}
+            uang.push(obj)
+            fs.writeFileSync('./database/json/uang.json', JSON.stringify(uang))
+        }
+
+        const addKoinUser = (sender, amount) => {
+            let position = false
+            Object.keys(uang).forEach((i) => {
+                if (uang[i].id === sender) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                uang[position].uang += amount
+                fs.writeFileSync('./database/json/uang.json', JSON.stringify(uang))
+            }
+        }
+
+        const checkATMuser = (sender) => {
+                let position = false
+            Object.keys(uang).forEach((i) => {
+                if (uang[i].id === sender) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                return uang[position].uang
+            }
+        }
+
+        const bayarLimit = (sender, amount) => {
+                let position = false
+            Object.keys(_limit).forEach((i) => {
+                if (_limit[i].id === sender) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                _limit[position].limit -= amount
+                fs.writeFileSync('./database/json/limit.json', JSON.stringify(_limit))
+            }
+        }
+
+        const confirmATM = (sender, amount) => {
+                let position = false
+            Object.keys(uang).forEach((i) => {
+                if (uang[i].id === sender) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                uang[position].uang -= amount
+                fs.writeFileSync('./database/json/uang.json', JSON.stringify(uang))
+            }
+        }
+
+        const limitAdd = (sender) => {
+             let position = false
+            Object.keys(_limit).forEach((i) => {
+                if (_limit[i].id == sender) {
+                    position = i
+                }
+            })
+            if (position !== false) {
+                _limit[position].limit += 1
+                fs.writeFileSync('./database/json/limit.json', JSON.stringify(_limit))
+            }
         }
 
 function kyun(seconds){
