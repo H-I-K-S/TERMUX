@@ -35,14 +35,4 @@ const help = (prefix, ownerBot, botName) => {
   ├─ ❏ ${prefix}stayonscreenmenu
   ├─ ❏ ${prefix}ownermenu
   └─ ❏ ${prefix}othermenu
-◪ *OTHER*
-  │
-  ├─ ❏ ${prefix}send
-  ├─ ❏ ${prefix}wame
-  ├─ ❏ ${prefix}virtex
-  ├─ ❏ ${prefix}qrcode
-  ├─ ❏ ${prefix}timer
-  ├─ ❏ ${prefix}fml
-  └─ ❏ ${prefix}fml2`
-}
 exports.help = help
