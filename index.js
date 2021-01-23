@@ -73,7 +73,7 @@ let {
 // Load Menu File
 const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
-const { adult } = require('./database/menu/18+')
+const { adult } = require('./database/menu/adult')
 const { downloader } = require('./database/menu/downloader')
 const { education } = require('./database/menu/education')
 const { fun } = require('./database/menu/fun')
