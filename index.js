@@ -25,7 +25,7 @@ const {
     processTime,
 } = require('@adiwajshing/baileys')
 
-/******BEGIN OF FILE INPUT******/
+// Load Js File
 const { color, bgcolor } = require('./lib/color')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
@@ -33,9 +33,8 @@ const { virtex } = require('./src/virtex')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
-/******END OF FILE INPUT******/
 
-/******BEGIN OF NPM PACKAGE INPUT******/
+// Load Npm Package
 const fs = require('fs')
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
@@ -52,9 +51,8 @@ const cd = 4.32e+7
 const crypto = require('crypto')
 const qrcode = require("qrcode-terminal")
 const axios = require('axios')
-/******END OF NPM PACKAGE INPUT******/
 
-/******BEGIN OF JSON INPUT******/
+// Load Json File
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
@@ -64,9 +62,14 @@ const event = JSON.parse(fs.readFileSync('./database/json/event.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 const uang = JSON.parse(fs.readFileSync('./database/json/uang.json'))
 const _registered = JSON.parse(fs.readFileSync('./database/json/registered.json'))
-/******END OF JSON INPUT******/
 
-/******BEGIN OF MENU INPUT******/
+let {
+    botName,
+    ownerName,
+    BarBarKey,
+} = setting
+
+// Load Menu File
 const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
 const { 18+ } = require('./database/menu/18+')
@@ -89,23 +92,20 @@ const { stayonscreen } = require('./database/menu/stayonscreen')
 const { stickermaker } = require('./database/menu/stickermaker')
 const { tod } = require('./database/menu/tod')
 const { wibu } = require('./database/menu/wibu')
-/******END OF MENU INPUT******/
 
-/******LOAD OF VCARD INPUT******/
+// Load Vcard Contact
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Nazwa🖤\n' // full name
             + 'ORG:Owner Bot;\n' // the organization of the contact
             + 'TEL;type=CELL;type=VOICE;waid=12542123926:+1 (254) 212-3926\n' // WhatsApp ID + phone number
             + 'END:VCARD'
-/******END OF VCARD INPUT******/
-
 prefix = '.'
 blocked = []
 limitawal = '20'
 cr = '*BOT INI SUDAH TERVERIFIKASI*'
 
-/******BEGIN OF FUNCTIONS INPUT******/
+// Functions
 const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
@@ -417,9 +417,6 @@ async function starts() {
                         const isEventon = isGroup ? event.includes(from) : false
                         const isRegister = checkRegisteredUser(sender)
                         pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
-                        /******ApiKey Input******/
-                        const BarBarKey = 'YOUR_APIKEY'
-                        /******End of ApiKey Input******/
 
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
@@ -519,8 +516,7 @@ async function starts() {
 			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
- 
-       /******END OF FUNCTIONS INPUT******/
+                     // Load Commands
 			switch(command) {
 				case 'help':
 				case 'menu':
