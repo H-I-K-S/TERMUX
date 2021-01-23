@@ -362,12 +362,16 @@ async function starts() {
 			const type = Object.keys(mek.message)[0]
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
+                        const timi = moment.tz('Asia/Jakarta').add(30, 'days').calendar();
+                        const timu = moment.tz('Asia/Jakarta').add(20, 'days').calendar();
 			const date = moment.tz('Asia/Jakarta').format('DD,MM,YY')
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
 			const args = body.trim().split(/ +/).slice(1)
 			const isCmd = body.startsWith(prefix)
+                        const tescuk = ["0@s.whatsapp.net"]
+                        const q = args.join(' ')
 
 			mess = {
 				wait: '⌛ Sedang di Prosess ⌛',
@@ -412,6 +416,9 @@ async function starts() {
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '12542123926@s.whatsapp.net'
+                        const isEventon = isGroup ? event.includes(from) : false
+                        const isRegister = checkRegisteredUser(sender)
+                        pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
                         /******ApiKey Input******/
                         const BarBarKey = 'YOUR_APIKEY'
                         /******End of ApiKey Input******/
@@ -443,6 +450,63 @@ async function starts() {
                     addLevelingLevel(sender, 1)
                     await reply(`*「 LEVEL UP 」*\n\n➸ *Name*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongrats!! 🎉🎉`)
                 }
+            } catch (err) {
+                console.error(err)
+            }
+        }
+            //function check limit
+          const checkLimit = (sender) => {
+                let found = false
+                    for (let lmt of _limit) {
+                        if (lmt.id === sender) {
+                            limitCounts = limitawal - lmt.limit
+                            if (limitCounts <= 0) return client..sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
+                            client.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                            found = true
+                        }
+                    }
+                    if (found === false) {
+                        let obj = { id: sender, limit: 1 }
+                        _limit.push(obj)
+                        fs.writeFileSync('./database/json/limit.json', JSON.stringify(_limit))
+                        client.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                    }
+                                }
+
+                        //funtion limited
+           const isLimit = (sender) =>{
+                      let position = false
+              for (let i of _limit) {
+              if (i.id === sender) {
+                let limits = i.limit
+              if (limits >= limitawal ) {
+                  position = true
+                    client.sendMessage(from, ind.limitend(pushname), text, {quoted: mek})
+                    return true
+              } else {
+                _limit
+                  position = true
+                  return false
+               }
+             }
+           }
+           if (position === false) {
+                const obj = { id: sender, limit: 1 }
+                _limit.push(obj)
+                fs.writeFileSync('./database/json/limit.json',JSON.stringify(_limit))
+           return false
+       }
+     }
+
+
+
+            //function balance
+            if (isRegister && isGroup ) {
+            const checkATM = checkATMuser(sender)
+            try {
+                if (checkATM === undefined) addATM(sender)
+                const uangsaku = Math.floor(Math.random() * 10) + 90
+                addKoinUser(sender, uangsaku)
             } catch (err) {
                 console.error(err)
             }
