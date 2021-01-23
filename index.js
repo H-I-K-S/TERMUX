@@ -6,7 +6,7 @@
 * Baca readme nya biar gk tanya tanya
 
 - What's New?
-* Change Arugaz prefix & Fix Fitnah & Fix Ping
+* Change domain arugaz
 */
 
 const {
@@ -14,7 +14,15 @@ const {
     MessageType,
     Presence,
     Mimetype,
-    GroupSettingChange
+    GroupSettingChange,
+    MessageOptions,
+    WALocationMessage,
+    WA_MESSAGE_STUB_TYPES,
+    ReconnectMode,
+    ProxyAgent,
+    waChatKey,
+    mentionedJid,
+    processTime,
 } = require('@adiwajshing/baileys')
 
 /******BEGIN OF FILE INPUT******/
