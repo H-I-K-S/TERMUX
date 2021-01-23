@@ -72,7 +72,7 @@ let {
 // Load Menu File
 const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
-const { 18+ } = require('./database/menu/18+')
+const { 18 } = require('./database/menu/18+')
 const { downloader } = require('./database/menu/downloader')
 const { education } = require('./database/menu/education')
 const { fun } = require('./database/menu/fun')
@@ -389,7 +389,7 @@ async function starts() {
 					ownerB: '[❗] Perintah ini hanya bisa di gunakan oleh owner bot! ❌',
 					admin: '[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
 					Badmin: '[❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
-                                        daftarB: `──「 DAFTAR 」──\nHalo kak !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Ryz|17`,
+                                        daftarB: `──「 BELUM REGISTER 」──\nHalo kak !\nKamu belum Register nih, register dulu yuk... \n\nCommand : ${prefix}register nama|umur\nContoh : ${prefix}register Nazwa|16`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
