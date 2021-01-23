@@ -68,7 +68,7 @@ let {
     botName,
     ownerName,
     BarBarKey,
-} = setting
+} = ('./settings/setting')
 
 // Load Menu File
 const { help } = require('./src/help')
@@ -456,7 +456,7 @@ async function starts() {
                     for (let lmt of _limit) {
                         if (lmt.id === sender) {
                             limitCounts = limitawal - lmt.limit
-                            if (limitCounts <= 0) return client..sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
+                            if (limitCounts <= 0) return client.sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
                             client.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
                             found = true
                         }
