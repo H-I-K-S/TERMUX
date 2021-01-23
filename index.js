@@ -58,7 +58,6 @@ const axios = require('axios')
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
-const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 const event = JSON.parse(fs.readFileSync('./database/json/event.json'))
@@ -413,7 +412,6 @@ async function starts() {
 			const isNsfw = isGroup ? nsfw.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
-                        const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '12542123926@s.whatsapp.net'
                         const isEventon = isGroup ? event.includes(from) : false
