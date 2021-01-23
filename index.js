@@ -48,6 +48,10 @@ const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
+const cd = 4.32e+7
+const crypto = require('crypto')
+const qrcode = require("qrcode-terminal")
+const axios = require('axios')
 /******END OF NPM PACKAGE INPUT******/
 
 /******BEGIN OF JSON INPUT******/
@@ -57,6 +61,10 @@ const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
+const event = JSON.parse(fs.readFileSync('./database/json/event.json'))
+const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
+const uang = JSON.parse(fs.readFileSync('./database/json/uang.json'))
+const _registered = JSON.parse(fs.readFileSync('./database/json/registered.json'))
 /******END OF JSON INPUT******/
 
 /******BEGIN OF MENU INPUT******/
