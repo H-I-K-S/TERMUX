@@ -1,4 +1,4 @@
-const 18+ = (prefix, ownerBot, botName) => {
+const adult = (prefix, ownerBot, botName) => {
         return `
 「 *${botName}* 」
 
@@ -18,4 +18,4 @@ const 18+ = (prefix, ownerBot, botName) => {
   ├─ ❏ ${prefix}nsfwtrap
   └─ ❏ ${prefix}nsfwneko`
 }
-exports.18+ = 18+
+exports.adult = adult
