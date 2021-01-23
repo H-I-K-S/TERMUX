@@ -2095,6 +2095,7 @@ case 'timer':
                                         if (isRegister) return  reply(mess.only.daftarB)
                                         if (!q.includes('|')) return  reply(ind.wrongf())
                                         const namaUser = q.substring(0, q.indexOf('|') - 0)
+                                        const umurUser = q.substring(q.lastIndexOf('|') + 1)
                                         const serialUser = createSerial(20)
                                         veri = sender
                                         if (isGroup) {
