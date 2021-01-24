@@ -528,11 +528,13 @@ async function starts() {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
-                                /*case 'makermenu':
-                                        hisil = fs.readFileSync('./src/makerimg.jpg')
-                                        client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text})
+                                /*case 'help':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
+				        const uangku = checkATMuser(sender)
+                                        client.sendMessage(from, help(pushname, prefix, botName, ownerName), {quoted: mek})
                                         break*/
-case 'timer':
+                  case 'timer':
 				if (args[1]=="detik") {var timer = args[0]+"000"
 				} else if (args[1]=="menit") {var timer = args[0]+"0000"
 				} else if (args[1]=="jam") {var timer = args[0]+"00000"
