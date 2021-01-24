@@ -73,7 +73,7 @@ Follow The Steps Below!
 
 ## Features
 
-| unique features | YES
+| Unique Features | YES
 | :---------------------------------------------: | :-----------: |
 | Register Name And Age|✅|
 | Leveling|✅|
