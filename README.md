@@ -75,8 +75,13 @@ Follow The Steps Below!
 
 | unique features | YES
 | :---------------------------------------------: | :-----------: |
-|  Register Name And Age|✅|
-|         Leveling    |✅|
+| Register Name And Age|✅|
+| Leveling|✅|
+| Money|✅|
+| Limit Commands|✅|
+| Buy Limit With Money|✅|
+| Event|✅|
+| Mining (Need Activate Event)|✅|
 
 |  MAKER  |                                           YES |
 | :---------------------------------------------: | :-----------: |
@@ -257,7 +262,7 @@ Follow The Steps Below!
 
 ---
 
-<img src="https://raw.githubusercontent.com/NazwaS/NazwaS/main/img/tenor.gif">
+<img src="http://4.bp.blogspot.com/-XFYyg7bmXe0/UIU9Lt2jaNI/AAAAAAAABw8/UgxWDUoBkaw/s1600/tumblr_mbi70xxizM1r922azo1_500_large.gif">
 
 ---
 
