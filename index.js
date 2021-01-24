@@ -580,8 +580,46 @@ async function starts() {
                                         break
                                 case 'musicmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, music(pushname, prefix, botName, ownerName), {quoted: mek})
                                         break
-                                NANTI LANJUTIN, CAPEK:/*/
+                                case 'othermenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, other(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'ownermenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, owner(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'searchmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, search(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'soundmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, sound(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'stalkmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, stalk(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'stayonscreenmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, stayonscreen(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'stickermakermenu':
+                                case 'stikermakermenu':
+                                        if (!isRsgister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, stickermaker(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'todmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessagr(from, tod(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'wibumenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, wibu(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                       --- MENUNYA LAGI DI TEST DULU KAK... TUNGGU YA... ---*/
                   case 'timer':
 				if (args[1]=="detik") {var timer = args[0]+"000"
 				} else if (args[1]=="menit") {var timer = args[0]+"0000"
