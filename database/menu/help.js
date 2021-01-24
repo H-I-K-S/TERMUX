@@ -34,5 +34,6 @@ const help = (prefix, ownerBot, botName) => {
   ├─ ❏ ${prefix}informationmenu
   ├─ ❏ ${prefix}stayonscreenmenu
   ├─ ❏ ${prefix}ownermenu
-  └─ ❏ ${prefix}othermenu
+  └─ ❏ ${prefix}othermenu`
+}
 exports.help = help
