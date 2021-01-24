@@ -2235,6 +2235,7 @@ case 'timer':
                                         reply(ind.uangkau(pushname, sender, kantong))
                                         break
                                 case 'buylimit':
+                                        if (args.length < 1) return reply('Berapa limit yang mau di beli kak? Pastiin uang kakak cukup juga kak! \n\nCara cek uang: ${prefix}bal')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         payout = body.slice(10)
                                         const koinPerlimit = 1000
