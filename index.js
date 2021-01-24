@@ -531,9 +531,57 @@ async function starts() {
                                 /*case 'help':
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
-				        const uangku = checkATMuser(sender)
+			                const uangku = checkATMuser(sender)
                                         client.sendMessage(from, help(pushname, prefix, botName, ownerName), {quoted: mek})
-                                        break*/
+                                        break
+                                case '18+menu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, adult(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'downloadermenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, downloader(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'educationmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, education(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'funmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, fun(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'groupmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, group(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'imagemakermenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, imagemaker(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'informationmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, information(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'islammenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, islam(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'kerangmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, kerang(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'logomakermenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, logomaker(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'mememenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, meme(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'musicmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        break
+                                NANTI LANJUTIN, CAPEK:/*/
                   case 'timer':
 				if (args[1]=="detik") {var timer = args[0]+"000"
 				} else if (args[1]=="menit") {var timer = args[0]+"0000"
