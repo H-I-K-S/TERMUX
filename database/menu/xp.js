@@ -1,10 +1,11 @@
-const xp = (prefix, ownerBot, botName) => {
+const xp = (prefix, botName, ownerName) => {
         return `
 「 *${botName}* 」
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerBot}
+  ❏ Creator: ${ownerName}
+  ❏ Version: 0.0.4
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
