@@ -543,96 +543,96 @@ async function starts() {
                                         break
                                 case '18+menu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, adult(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(adult(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'downloadermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, downloader(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(from, downloader(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'educationmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, education(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(from, education(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'funmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, fun(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(fun(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'groupmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, group(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(from, group(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'imagemakermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, imagemaker(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(imagemaker(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'informationmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, information(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(information(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'islammenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, islam(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(islam(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'kerangmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, kerang(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(kerang(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'logomakermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, logomaker(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(logomaker(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'mememenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, meme(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(meme(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'musicmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, music(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(music(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'othermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, other(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(other(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'ownermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, owner(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(owner(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'searchmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, search(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(search(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'soundmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, sound(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(sound(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'stalkmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, stalk(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(stalk(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'stayonscreenmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, stayonscreen(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(stayonscreen(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'stickermakermenu':
                                 case 'stikermakermenu':
                                         if (!isRsgister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, stickermaker(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(stickermaker(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'todmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessagr(from, tod(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(tod(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'wibumenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, wibu(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(wibu(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'xpmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, xp(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(xp(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'limitmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, limit(prefix, botName, ownerName), {quoted: mek})
+                                        await costum(limit(prefix, botName, ownerName), text, tescuk, cr)
                                         break 
                   case 'timer':
 				if (args[1]=="detik") {var timer = args[0]+"000"
