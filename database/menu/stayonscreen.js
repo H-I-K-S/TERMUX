@@ -13,7 +13,7 @@ const stayonscreen = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}chatlist
   ├─ ❏ ${prefix}ping
   └─ ❏ ${prefix}bugreport
-◪ *MENU*
+◪ *STAY ON SCREEN*
   │
   └─ ❏ ${prefix}afk`
 }
