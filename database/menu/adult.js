@@ -1,10 +1,10 @@
-const adult = (prefix, ownerBot, botName) => {
+const adult = (prefix, ownerName, botName) => {
         return `
 「 *${botName}* 」
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerBot}
+  ❏ Creator: ${ownerName}
   ❏ Version: 0.0.4
 ◪ *ABOUT*
   │
