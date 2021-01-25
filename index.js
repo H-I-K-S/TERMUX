@@ -559,7 +559,7 @@ async function starts() {
                                         break
                                 case 'groupmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        await costum(from, group(prefix, botName, ownerName), text, tescuk, cr)
+                                        await costum(group(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'imagemakermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
