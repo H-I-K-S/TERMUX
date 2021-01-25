@@ -1,10 +1,11 @@
-const tod = (prefix, ownerBot, botName) => {
+const tod = (prefix, botName, ownerName) => {
         return `
 「 *${botName}* 」
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerBot}
+  ❏ Creator: ${ownerName}
+  ❏ Version: 0.0.4
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
