@@ -1,10 +1,11 @@
-const other = (prefix, ownerBot, botName) => {
+const other = (prefix, botName, ownerName) => {
         return `
 「 *${botName}* 」
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerBot}
+  ❏ Creator: ${ownerName}
+  ❏ Version: 0.0.4
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
