@@ -5,6 +5,7 @@ const adult = (prefix, ownerBot, botName) => {
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
   ❏ Creator: ${ownerBot}
+  ❏ Version: 0.0.3
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
