@@ -30,8 +30,6 @@ const group = (prefix, ownerBot, botName) => {
   ├─ ❏ ${prefix}leave
   ├─ ❏ ${prefix}welcome
   ├─ ❏ ${prefix}nsfw
-  ├─ ❏ ${prefix}leveling
-  ├─ ❏ ${prefix}level
   ├─ ❏ ${prefix}delete
   ├─ ❏ ${prefix}simih
   └─ ❏ ${prefix}ownergroup`
