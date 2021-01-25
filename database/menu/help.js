@@ -39,6 +39,8 @@ const help = (pushname, prefix, botName, ownerName, reqXp, uangku) => {
   ├─ ❏ ${prefix}todmenu
   ├─ ❏ ${prefix}informationmenu
   ├─ ❏ ${prefix}stayonscreenmenu
+  ├─ ❏ ${prefix}xpmenu
+  ├─ ❏ ${prefix}limitmenu
   ├─ ❏ ${prefix}ownermenu
   └─ ❏ ${prefix}othermenu`
 }
