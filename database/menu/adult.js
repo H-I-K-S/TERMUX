@@ -1,4 +1,4 @@
-const adult = (prefix, ownerName, botName) => {
+const adult = (prefix, botName, ownerName) => {
         return `
 「 *${botName}* 」
 
