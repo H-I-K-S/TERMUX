@@ -1,8 +1,13 @@
-const help = (prefix, ownerBot, botName) => {
+const help = (pushname, prefix, ownerBot, botName, reqXp, uangku) => {
         return `
 「 *${botName}* 」
 
-◪ *INFO*
+◪ *USER INFO*
+  ❏ Name: ${pushname}
+  ❏ XP: ${reqXp}
+  ❏ Money: ${uangku}
+  ❏ Registered: ✔️
+◪ *BOT INFO*
   ❏ Prefix: 「  ${prefix}  」
   ❏ Creator: ${ownerBot}
 ◪ *ABOUT*
