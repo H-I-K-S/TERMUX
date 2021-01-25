@@ -93,6 +93,8 @@ const { stayonscreen } = require('./database/menu/stayonscreen')
 const { stickermaker } = require('./database/menu/stickermaker')
 const { tod } = require('./database/menu/tod')
 const { wibu } = require('./database/menu/wibu')
+/*const { xp } = require('./database/menu/xp')
+const { limit } = require('./database/menu/limit*/
 
 // Load Vcard Contact
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
@@ -532,92 +534,100 @@ async function starts() {
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
 			                const uangku = checkATMuser(sender)
-                                        client.sendMessage(from, help(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, help(pushname, prefix, botName, ownerName, reqXp, uangku), {quoted: mek})
                                         break
                                 case '18+menu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, adult(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, adult(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'downloadermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, downloader(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, downloader(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'educationmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, education(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, education(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'funmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, fun(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, fun(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'groupmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, group(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, group(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'imagemakermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, imagemaker(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, imagemaker(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'informationmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, information(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, information(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'islammenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, islam(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, islam(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'kerangmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, kerang(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, kerang(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'logomakermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, logomaker(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, logomaker(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'mememenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, meme(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, meme(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'musicmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, music(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, music(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'othermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, other(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, other(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'ownermenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, owner(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, owner(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'searchmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, search(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, search(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'soundmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, sound(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, sound(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'stalkmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, stalk(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, stalk(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'stayonscreenmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, stayonscreen(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, stayonscreen(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'stickermakermenu':
                                 case 'stikermakermenu':
                                         if (!isRsgister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, stickermaker(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, stickermaker(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'todmenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessagr(from, tod(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessagr(from, tod(prefix, botName, ownerName), {quoted: mek})
                                         break
                                 case 'wibumenu':
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        client.sendMessage(from, wibu(pushname, prefix, botName, ownerName), {quoted: mek})
+                                        client.sendMessage(from, wibu(prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'xpmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, xp(prefix, botName, ownerName), {quoted: mek})
+                                        break
+                                case 'limitmenu':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        client.sendMessage(from, limit(prefix, botName, ownerName), {quoted: mek})
                                         break
                        --- MENUNYA LAGI DI TEST DULU KAK... TUNGGU YA... ---*/
                   case 'timer':
