@@ -1115,9 +1115,9 @@ async function starts() {
 					reply(anu.result)
 					break
 				case 'tagall':
-				client.updatePresence(from, Presence.composing) 
+				        client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
+                                        if (!isRegister) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
