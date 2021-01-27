@@ -136,6 +136,8 @@ Follow The Steps Below!
 | Nulis|✅|
 | Quotes|✅|
 | Quotes2|✅|
+| Translate|✅|
+| Tafsir Mimpi|✅|
 
 | ASK | YES |
 | :-----------------: | :-------: |
@@ -177,6 +179,7 @@ Follow The Steps Below!
 | welcome New Members|✅|
 | Nsfw|✅|
 | Simih|✅|
+| Tag Me|✅|
 
 | SOUND | YES |
 | :-----------------: | :-------: |
