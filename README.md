@@ -71,7 +71,7 @@ Follow The Steps Below!
 > npm start
 ```
 
-## Features
+## 120+ Features
 
 | Unique Features | YES
 | :---------------------------------------------: | :-----------: |
