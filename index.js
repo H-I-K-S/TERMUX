@@ -2006,7 +2006,7 @@ async function starts() {
                                         loc = body.slice(8)
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (args.length < 1) return reply('Daerahnya dimana kak?')
-                                        anu = await fetchJson(``https://mhankbarbar.tech/api/jadwalshalat?daerah=${loc}&apiKey=${BarBarKey}`, {method: 'get'})
+                                        anu = await fetchJson(`https://mhankbarbar.tech/api/jadwalshalat?daerah=${loc}&apiKey=${BarBarKey}`, {method: 'get'})
                                         mbteks = `◪ *JAM SHALAT* \n  │\n  ├─ ❏ Daerah : ${loc} \n  ├─ ❏ Ashar : ${anu.Ashar} \n  ├─ ❏ Dhuha : ${anu.Dhuha} \n  ├─ ❏ Dzuhur : ${anu.Dzuhur} \n  ├─ ❏ Imsyak : ${anu.Imsyak} \n  ├─ ❏ Isya : ${anu.Isya} \n  ├─ ❏ Maghrib : ${anu.Maghrib} \n  └─ ❏ Subuh : ${anu.Subuh}`
                                         client.sendMessage(from, mbteks, text)
                                         break
