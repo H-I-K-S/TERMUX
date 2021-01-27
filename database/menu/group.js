@@ -33,6 +33,7 @@ const group = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}nsfw
   ├─ ❏ ${prefix}delete
   ├─ ❏ ${prefix}simih
+  ├─ ❏ ${prefix}tagme
   └─ ❏ ${prefix}ownergroup`
 }
 exports.group = group
