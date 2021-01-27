@@ -20,6 +20,8 @@ const education = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}nulis
   ├─ ❏ ${prefix}quotes
   ├─ ❏ ${prefix}quotes2
+  ├─ ❏ ${prefix}tafsirmimpi
+  ├─ ❏ ${prefix}translate
   └─ ❏ ${prefix}artinama`
 }
 exports.education = education
