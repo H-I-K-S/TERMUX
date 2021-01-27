@@ -615,7 +615,7 @@ async function starts() {
                                         break
                                 case 'stickermakermenu':
                                 case 'stikermakermenu':
-                                        if (!isRsgister) return reply(mess.only.daftarB)
+                                        if (!isRegister) return reply(mess.only.daftarB)
                                         await costum(stickermaker(prefix, botName, ownerName), text, tescuk, cr)
                                         break
                                 case 'todmenu':
@@ -2002,12 +2002,14 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         await limitAdd(sender)
                                         break
-                                /*case 'jsholat':
-                                        tels = body.slice(8)
+                                case 'jsholat':
+                                        loc = body.slice(8)
+                                        if (!isRegister) return reply(mess.only.daftarB)
                                         if (args.length < 1) return reply('Daerahnya dimana kak?')
-                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${tels}&apikey=BotWeA`, {method: 'get'})
-                                        reply(anu.result)
-                                        break*/
+                                        anu = await fetchJson(``https://mhankbarbar.tech/api/jadwalshalat?daerah=${loc}&apiKey=${BarBarKey}`, {method: 'get'})
+                                        mbteks = `◪ *JAM SHALAT* \n  │\n  ├─ ❏ Daerah : ${loc} \n  ├─ ❏ Ashar : ${anu.Ashar} \n  ├─ ❏ Dhuha : ${anu.Dhuha} \n  ├─ ❏ Dzuhur : ${anu.Dzuhur} \n  ├─ ❏ Imsyak : ${anu.Imsyak} \n  ├─ ❏ Isya : ${anu.Isya} \n  ├─ ❏ Maghrib : ${anu.Maghrib} \n  └─ ❏ Subuh : ${anu.Subuh}`
+                                        client.sendMessage(from, mbteks, text)
+                                        break
                                 case 'jokerlogo':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
@@ -2425,6 +2427,21 @@ async function starts() {
                                         anu = await fetchJson(`https://arugaz.my.id/api/edu/translate?lang=${lang}&text=${teksnya}`, {method: 'get'})
                                         arteks = `◪ *TRANSLATE* \n  │\n  ├─ ❏ Text : ${teksnya} \n  ├─ ❏ Translate : ${anu.text} \n  └─ ❏ *Pronunciation* : ${anu.pronunciation}`
                                         client.sendMessage(from, arteks, text)
+                                        break
+                                case 'tafsirmimpi':
+                                        aruga = body.slice(12)
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        if (args.length < 1) return reply(`mimpi apa kak?\nContoh: ${prefix}tafsirmimpi belanja`)
+                                        anu = await fetchJson(`https://arugaz.my.id/api/primbon/tafsirmimpi?mimpi=${aruga}`, {method: 'get'})
+                                        reply(anu.result.hasil)
+                                        break
+                                case 'tagme':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        const tagme = {
+                                                text: `@${nom.split("@s.whatsapp.net")[0]} Tuh dah ku tag!`,
+                                                contextInfo: { mentionedJid: [nom] }
+                                        }
+                                        client.sendMessage(from, tagme, text, {quoted: mek})
                                         break
 			        case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
