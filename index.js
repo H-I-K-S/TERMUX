@@ -1093,14 +1093,20 @@ async function starts() {
 					reply(`Prefix berhasil di ubah menjadi : ${prefix}`)
 					break
 				case 'meme':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        if (isLimit(sender)) return reply(ind.limitend(pusname))
 					meme = await kagApi.memes()
 					buffer = await getBuffer(`https://imgur.com/${meme.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+                                        await limitAdd(sender)
 					break
 				case 'memeindo':
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        if (isLimit(sender)) return reply(ind.limitend(pusname))
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://imgur.com/${memein.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+                                        await limitAdd(sender)
 					break
 				case 'block':
 					client.updatePresence(from, Presence.composing) 
@@ -2319,18 +2325,6 @@ async function starts() {
                                         reply(anu.result)
                                         await limitAdd(sender)
                                         break
-                                /*case 'translate':
-                                        var gl = body.slice(10)
-                                        var lg = gh.split("|")[0];
-                                        var teksnya = gh.split("|")[1];
-                                        if (args.length < 1) return reply(`kode bahasanya mana kak\nContoh:\n${prefix}translate|en|aku nazwa`)
-                                        if (args.length < 2) return reply(`teksnya mana um\nContoh:\n${prefix}translate|en|aku nazwa`)
-                                        if (!isRegister) return reply(mess.only.daftarB)
-                                        reply(mess.wait)
-                                        anu = await fetchJson(`https://arugaz.my.id/api/edu/translate?lang=${lg}&text=${teksnya}`, {method: 'get'})
-                                        hasil = `*Text* : ${teksnya}\n*Translate* : ${anu.text}\n*Languange* : ${lg}\n*Did You Mean* : ${anu.didYouMean}`
-                                        client.sendMessage(from, hasil, text, {quoted: mek})
-                                        break*/
                                 case 'bal':
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         const kantong = checkATMuser(sender)
@@ -2407,7 +2401,7 @@ async function starts() {
                                         }
                                         await limitAdd(sender)
                                         break
-                                 case 'setname':
+                                 /*case 'setname':
                                         if (!isGroup) return reply(ind.groupo())
 			                if (!isGroupAdmins) return reply(ind.admin())
 			                if (!isBotGroupAdmins) return reply(ind.badmin())
@@ -2420,10 +2414,21 @@ async function starts() {
 			         	if (!isBotGroupAdmins) return reply(ind.badmin())
                                         client.groupUpdateDescription(from, `${body.slice(9)}`)
                                         client.sendMessage(from, 'Succes, Ganti Deskripsi Grup', text, {quoted: mek})
-					break
+					break*/
+                                case 'translate':
+                                        aruga = body.slice(10)
+                                        lang = aruga.split("|")[0];
+                                        teksnya = aruga.split("|")[1];
+                                        if (!isRegister) return reply(mess.only.daftarB)
+                                        if (args.length < 1) return reply(`kode bahasanya mana kak?\nContoh: ${prefix}translate en|Hai, aku Nazwa`)
+                                        if (args.length < 2) return reply(`teksnya mana kak?\nContoh: ${prefix}translate en|Hai, aku Nazwa`)
+                                        anu = await fetchJson(`https://arugaz.my.id/api/edu/translate?lang=${lang}&text=${teksnya}`, {method: 'get'})
+                                        arteks = `◪ *TRANSLATE* \n  │\n  ├─ ❏ Text : ${teksnya} \n  ├─ ❏ Translate : ${anu.text} \n  └─ ❏ *Pronunciation* : ${anu.pronunciation}`
+                                        client.sendMessage(from, arteks, text)
+                                        break
 			        case 'wait':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-                                        if (!isUser) return reply(mess.only.daftarB)
+                                        if (!isRegister) return reply(mess.only.daftarB)
 						reply(mess.wait)
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						media = await client.downloadMediaMessage(encmedia)
