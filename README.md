@@ -1,8 +1,8 @@
-### Pun10~ I'm Hiks<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="27px">
+### Pun10 , I'm Hiks<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="27px">
 <p align="center">
 
 <p align="center">
-<a href="#"><img title="termux-whatsapp-bot" src="https://img.shields.io/badge/TERMUX-darkblue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="termux-whatsapp-bot" src="https://img.shields.io/badge/TERMUX-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/H-I-K-S"><img title="Dev" src="https://img.shields.io/badge/DEV-HIKS-black?style=for-the-badge&logo=github"></a>
