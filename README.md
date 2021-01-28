@@ -8,10 +8,6 @@
 <a href="https://github.com/H-I-K-S"><img title="Dev" src="https://img.shields.io/badge/DEV-HIKS-black?style=for-the-badge&logo=github"></a>
 </p>
 
-
-<img src="https://media4.giphy.com/media/qLFKvOpoS1N7ts7xO8/giphy.gif">
-<details>
-
 <summary>🍥 Help me!</summary>
 
 * [Saweria](https://saweria.co/PUDlDl)
