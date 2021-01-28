@@ -33,7 +33,7 @@
 ## Made By
 
 <p align="center">
-    <a href="https://github.com/H-I-K-S"><img title="H-I-K-S" src="https://avatars.githubusercontent.com/u/77239531?s=400&v=4" width="128">
+    <a href="https://github.com/H-I-K-S"><img title="H-I-K-S" src="https://avatars.githubusercontent.com/u/75057738?s=400&v=4" width="128">
     <a href="https://github.com/paritsod"><img title="Paritsod" src="https://avatars.githubusercontent.com/u/77239531?s=400&v=4" width="128">
     <a href="https://github.com/RyzRdy"><img title="RyzRdy" src="https://avatars.githubusercontent.com/u/77214091?s=400&u=74c18d64ea4169964bdb9d1035958554291823f8&v=4" width="128">
     <a href="https://github.com/mrfzvx12"><img title="mrfzvx12" src="https://avatars.githubusercontent.com/u/72728486?s=400&u=6dd38cb0148eba68e22e9260adbeec1e512b7c8f&v=4 width="128">
