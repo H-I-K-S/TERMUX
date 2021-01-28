@@ -13,10 +13,12 @@
 <a href="https://github.com/NazwaS"><img title="Author" src="https://img.shields.io/badge/AUTHOR-NAZWAS-orange?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://github.com/NazwaS/followers"><img title="Followers" src="https://img.shields.io/github/followers/NazwaS?style=flat-square"></a>
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
+    <a href="https://github.com/NazwaS/followers"><img title="Followers" src="https://img.shields.io/github/followers/NazwaS?style=flat-square"></a>
+    <a href="https://github.com/NazwaS/termux-whatsapp-bot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
+    <a href="https://github.com/NazwaS/termux-whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
+    <a href="https://github.com/NazwaS/termux-whatsapp-bot/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
+    <a href="#"><img title="maintened" src="https://img.shields.io/badge/maintained%3F-yes-green.svg?style=flat">
+    <a href="#"><img title="repo size" src="https://img.shields.io/github/repo-size/NazwaS/termux-whatsapp-bot?style=flat-square">
 </p>
 
 <img src="https://media4.giphy.com/media/qLFKvOpoS1N7ts7xO8/giphy.gif">
@@ -27,6 +29,17 @@
 * [Saweria](https://saweria.co/nazwas)
 * [Trakteer](https://trakteer.id/NazwaS)
 </details>
+
+## Made By
+
+<p align="center">
+    <a href="https://github.com/paritsod"><img title="Paritsod" src="https://avatars.githubusercontent.com/u/77239531?s=400&v=4" width="128">
+    <a href="https://github.com/RyzRdy"><img title="RyzRdy" src="https://avatars.githubusercontent.com/u/77214091?s=400&u=74c18d64ea4169964bdb9d1035958554291823f8&v=4" width="128">
+    <a href="https://github.com/mrfzvx12"><img title="mrfzvx12" src="https://avatars.githubusercontent.com/u/72728486?s=400&u=6dd38cb0148eba68e22e9260adbeec1e512b7c8f&v=4 width="128">
+    <a href="https://github.com/Mr-hadi"><img title="Mr-hadi" src="https://avatars.githubusercontent.com/u/62751928?s=400&v=4" width="128">
+    <a href="https://github.com/FauzyRahadian"><img title="FauzyRahadian" src="https://avatars.githubusercontent.com/u/77146325?s=400&u=986617192608f5104b03a1512d14ca8312f67579&v=4" width="128">
+    <a href="https://github.com/NazwaS"><img title="NazwaS" src="https://avatars.githubusercontent.com/u/75057738?s=460&u=c7d37d13fdb8977a4474bf743a87a7f39c00dc4b&v=4" width="128">
+</p>
 
 ## Tools
 
